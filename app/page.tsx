@@ -6,7 +6,7 @@ const C = {
   border: 'rgba(255,255,255,0.07)', emerald: '#10b981',
   emeraldDim: 'rgba(16,185,129,0.12)', emeraldBorder: 'rgba(16,185,129,0.28)',
   white: '#f0f6ff', muted: '#8899b4', dim: '#4e6280',
-  display: "'Syne', sans-serif", body: "'DM Sans', sans-serif",
+    font: "'Inter', system-ui, sans-serif",
 }
 
 const exchanges = [

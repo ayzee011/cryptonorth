@@ -15,7 +15,7 @@ const faqs = [
 ]
 
 export default function BeginnersGuidePage() {
-  const [openFaq, setOpenFaq] = useState(null)
+  const [openFaq, setOpenFaq] = useState<number | null>(null)
   const steps = [
     {n:'1',t:'Choose a Regulated Canadian Exchange',b:'Start with a FINTRAC and CSA-registered Canadian exchange. We recommend Bitbuy or Newton for beginners - both are Canadian-owned, easy to use, and support free Interac e-Transfer deposits.',link:'/exchanges',lt:'Compare Canadian Exchanges'},
     {n:'2',t:'Create and Verify Your Account',b:'Sign up with your email. All regulated Canadian exchanges require identity verification (KYC) under FINTRAC rules - you will need government-issued ID and a selfie. This typically takes a few minutes to a few hours.',link:null,lt:null},
@@ -29,7 +29,7 @@ export default function BeginnersGuidePage() {
       <nav style={{position:'sticky',top:0,zIndex:100,background:'rgba(11,18,32,0.95)',backdropFilter:'blur(16px)',borderBottom:'1px solid '+C.border}}>
         <div style={{maxWidth:1200,margin:'0 auto',padding:'0 32px',display:'flex',alignItems:'center',justifyContent:'space-between',height:68,gap:24}}>
           <a href="/" style={{display:'flex',alignItems:'center',gap:10,fontWeight:700,fontSize:18,color:C.white,textDecoration:'none',flexShrink:0}}>
-            <div style={{width:36,height:36,background:C.emerald,borderRadius:8,display:'flex',alignItems:'center',justifyContent:'center',fontSize:18,filter:'grayscale(1) brightness(10)'}}>🍁</div>
+            <div style={{width:36,height:36,background:C.emerald,borderRadius:8,display:'flex',alignItems:'center',justifyContent:'center',fontSize:18,filter:'grayscale(1) brightness(10)'}}>ð</div>
             Crypto<span style={{color:C.emerald}}>North</span>
           </a>
           <div style={{display:'flex'}}>{[['/','Home'],['/exchanges','Exchanges'],['/tax-guide','Tax Guide'],['/wallets','Wallets'],['/beginners-guide',"Beginner's Guide"]].map(([h,l])=><a key={l} href={h} style={{color:h==='/beginners-guide'?C.white:C.muted,fontSize:14,fontWeight:h==='/beginners-guide'?600:500,padding:'0 14px',height:68,display:'flex',alignItems:'center',whiteSpace:'nowrap',textDecoration:'none'}}>{l}</a>)}</div>
@@ -53,7 +53,7 @@ export default function BeginnersGuidePage() {
                 <div style={{background:C.surface,border:'1px solid '+C.border,borderRadius:14,padding:'18px 22px',flex:1}}>
                   <div style={{fontWeight:600,fontSize:15,color:C.white,marginBottom:6}}>{s.t}</div>
                   <p style={{fontSize:13,color:C.muted,lineHeight:1.7,margin:'0 0 8px'}}>{s.b}</p>
-                  {s.link&&<a href={s.link} style={{fontSize:13,color:C.emerald,fontWeight:600,textDecoration:'none'}}>{s.lt} →</a>}
+                  {s.link&&<a href={s.link} style={{fontSize:13,color:C.emerald,fontWeight:600,textDecoration:'none'}}>{s.lt} â</a>}
                 </div>
               </div>
             ))}
@@ -63,12 +63,12 @@ export default function BeginnersGuidePage() {
           <h2 style={{fontSize:'1.5rem',fontWeight:700,color:C.white,marginBottom:20,paddingBottom:12,borderBottom:'1px solid '+C.border}}>What Makes Canada Different</h2>
           <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:16}}>
             {[
-              {icon:'🏛️',t:'FINTRAC Registration Required',b:'All exchanges serving Canadians must register with FINTRAC as Money Services Businesses under the PCMLTFA. This requires KYC identity verification and AML compliance.'},
-              {icon:'📊',t:'CRA Tax Obligations',b:'The CRA taxes crypto. 50% capital gains inclusion rate for casual investors (the 66.67% hike was cancelled March 21 2025). Report all disposals on your T1 by April 30 2026.'},
-              {icon:'🍁',t:'Interac e-Transfer Deposits',b:'Canadian exchanges accept Interac e-Transfer - the fastest and cheapest way to fund your account in CAD. Most offer free deposits. A major advantage for Canadians.'},
-              {icon:'⚠️',t:'No CDIC Protection',b:'Crypto holdings on exchanges are NOT covered by CDIC (Canada Deposit Insurance Corporation). QuadrigaCX collapsed in 2019 losing $169M CAD. Only use regulated exchanges.'},
-              {icon:'🗺️',t:'Provincial Regulation Varies',b:'Canada has no single national crypto license. Each provincial securities commission independently approves exchanges. Kraken is only approved in AB BC MB and SK - NOT Ontario or Quebec.'},
-              {icon:'📅',t:'CARF Starting 2026',b:'The Crypto-Asset Reporting Framework took effect January 1 2026. Canadian exchanges must now report user transaction data to the CRA. First filings expected in 2027.'},
+              {icon:'ðï¸',t:'FINTRAC Registration Required',b:'All exchanges serving Canadians must register with FINTRAC as Money Services Businesses under the PCMLTFA. This requires KYC identity verification and AML compliance.'},
+              {icon:'ð',t:'CRA Tax Obligations',b:'The CRA taxes crypto. 50% capital gains inclusion rate for casual investors (the 66.67% hike was cancelled March 21 2025). Report all disposals on your T1 by April 30 2026.'},
+              {icon:'ð',t:'Interac e-Transfer Deposits',b:'Canadian exchanges accept Interac e-Transfer - the fastest and cheapest way to fund your account in CAD. Most offer free deposits. A major advantage for Canadians.'},
+              {icon:'â ï¸',t:'No CDIC Protection',b:'Crypto holdings on exchanges are NOT covered by CDIC (Canada Deposit Insurance Corporation). QuadrigaCX collapsed in 2019 losing $169M CAD. Only use regulated exchanges.'},
+              {icon:'ðºï¸',t:'Provincial Regulation Varies',b:'Canada has no single national crypto license. Each provincial securities commission independently approves exchanges. Kraken is only approved in AB BC MB and SK - NOT Ontario or Quebec.'},
+              {icon:'ð',t:'CARF Starting 2026',b:'The Crypto-Asset Reporting Framework took effect January 1 2026. Canadian exchanges must now report user transaction data to the CRA. First filings expected in 2027.'},
             ].map(i=>(
               <div key={i.t} style={{background:C.surface,border:'1px solid '+C.border,borderRadius:14,padding:22}}>
                 <div style={{fontSize:22,marginBottom:10}}>{i.icon}</div>
@@ -99,9 +99,9 @@ export default function BeginnersGuidePage() {
       </div>
       <footer style={{background:'#070e1a',borderTop:'1px solid '+C.border,padding:'44px 32px'}}>
         <div style={{maxWidth:1200,margin:'0 auto',display:'flex',justifyContent:'space-between',alignItems:'center',flexWrap:'wrap',gap:20}}>
-          <div><div style={{fontWeight:700,fontSize:16}}>🍁 CryptoNorth</div><div style={{fontSize:12,color:C.dim,marginTop:3}}>Canada's independent crypto resource</div></div>
+          <div><div style={{fontWeight:700,fontSize:16}}>ð CryptoNorth</div><div style={{fontSize:12,color:C.dim,marginTop:3}}>Canada's independent crypto resource</div></div>
           <div style={{display:'flex',gap:24,flexWrap:'wrap'}}>{[['/','Home'],['/exchanges','Exchanges'],['/tax-guide','Tax Guide'],['/wallets','Wallets'],['/beginners-guide',"Beginner's Guide"]].map(([h,l])=><a key={l} href={h} style={{fontSize:13,color:C.dim,textDecoration:'none'}}>{l}</a>)}</div>
-          <div style={{fontSize:11,color:'#2a3a52',width:'100%',marginTop:8}}>© 2026 CryptoNorth. Not financial or legal advice. Information current as of April 2026.</div>
+          <div style={{fontSize:11,color:'#2a3a52',width:'100%',marginTop:8}}>Â© 2026 CryptoNorth. Not financial or legal advice. Information current as of April 2026.</div>
         </div>
       </footer>
     </div>

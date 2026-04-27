@@ -19,7 +19,7 @@ const exchanges = [
   },
   {
     name: 'Newton', featured: false, rating: '★★★★☆', score: '4.4',
-    fee: '0.25–0.6%', coins: '70+', bestFor: 'Intermediate',
+    fee: '0.25–0.6%', coins: '70+', bestFor: 'Intermediate',h
     pros: ['70+ coins', 'Free Interac e-Transfer'],
     cons: ['No staking rewards'],
     url: 'https://newton.co',
@@ -96,7 +96,7 @@ export default function Home() {
       {/* NAV */}
       <nav style={{ position: 'sticky', top: 0, zIndex: 100, background: 'rgba(11,18,32,0.92)', backdropFilter: 'blur(16px)', borderBottom: `1px solid ${C.border}` }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 32px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 68, gap: 24 }}>
-          <a href="/" style={{ display: 'flex', alignItems: 'center', gap: 10, fontFamily: C.display, fontSize: '1.15rem', fontWeight: 700, flexShrink: 0 }}>
+          <a href="/" style={{ display: 'flex', alignItems: 'center', gap: 10, fontFamily: C.font, fontSize: '1.15rem', fontWeight: 700, flexShrink: 0 }}>
             <div style={{ width: 34, height: 34, background: C.emerald, borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 17 }}>🍁</div>
             Crypto<span style={{ color: C.emerald }}>North</span>
           </a>
@@ -115,7 +115,7 @@ export default function Home() {
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: C.emeraldDim, border: `1px solid ${C.emeraldBorder}`, color: C.emerald, fontSize: 11.5, fontWeight: 600, borderRadius: 9999, padding: '6px 14px', marginBottom: 28, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
             🍁 Built for Canadians &nbsp;·&nbsp; CRA &amp; CSA Compliant
           </div>
-          <h1 style={{ fontFamily: C.display, fontSize: 'clamp(2.6rem,4.5vw,3.8rem)', fontWeight: 800, lineHeight: 1.05, letterSpacing: '-0.03em', color: C.white, marginBottom: 20 }}>
+          <h1 style={{ fontFamily: C.font, fontSize: 'clamp(2.6rem,4.5vw,3.8rem)', fontWeight: 800, lineHeight: 1.05, letterSpacing: '-0.03em', color: C.white, marginBottom: 20 }}>
             Crypto, simplified<br />for Canadians.
           </h1>
           <p style={{ fontSize: '1.05rem', color: C.muted, lineHeight: 1.75, maxWidth: 430, marginBottom: 36 }}>
@@ -160,7 +160,7 @@ export default function Home() {
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 32px 80px', display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 14 }}>
         {[['6+','Trusted Exchanges'],['500+','Supported Coins'],['100%','CAD On-Ramps'],['FINTRAC','& CSA Registered']].map(([n,l]) => (
           <div key={l} style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: 16, padding: '22px 20px', textAlign: 'center' }}>
-            <div style={{ fontFamily: C.display, fontSize: '2.1rem', fontWeight: 800, color: C.emerald }}>{n}</div>
+            <div style={{ fontFamily: C.font, fontSize: '2.1rem', fontWeight: 800, color: C.emerald }}>{n}</div>
             <div style={{ fontSize: 12.5, color: C.muted, marginTop: 4 }}>{l}</div>
           </div>
         ))}
@@ -171,14 +171,14 @@ export default function Home() {
       {/* EXCHANGES */}
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: '72px 32px' }} id="exchanges">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 32 }}>
-          <h2 style={{ fontFamily: C.display, fontSize: '1.65rem', fontWeight: 800, letterSpacing: '-0.025em' }}>Featured Canadian Exchanges</h2>
+          <h2 style={{ fontFamily: C.font, fontSize: '1.65rem', fontWeight: 800, letterSpacing: '-0.025em' }}>Featured Canadian Exchanges</h2>
           <a href="/exchanges" style={{ color: C.emerald, fontSize: 13.5, fontWeight: 600 }}>Full comparison →</a>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16 }}>
           {exchanges.map(e => (
             <div key={e.name} style={{ background: e.featured ? C.surface2 : C.surface, border: `1px solid ${e.featured ? C.emeraldBorder : C.border}`, borderRadius: 18, padding: 26, display: 'flex', flexDirection: 'column', gap: 14, transition: 'transform .2s' }}>
               <div>
-                <div style={{ fontFamily: C.display, fontWeight: 700, fontSize: 18 }}>
+                <div style={{ fontFamily: C.font, fontWeight: 700, fontSize: 18 }}>
                   {e.name}
                   {e.featured && <span style={{ fontSize: 10, color: C.emerald, background: C.emeraldDim, padding: '2px 8px', borderRadius: 4, marginLeft: 8, fontWeight: 600 }}>★ TOP PICK</span>}
                 </div>
@@ -208,7 +208,7 @@ export default function Home() {
 
       {/* FEATURES */}
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: '72px 32px' }}>
-        <h2 style={{ fontFamily: C.display, fontSize: '1.65rem', fontWeight: 800, letterSpacing: '-0.025em', marginBottom: 32 }}>Why choose CryptoNorth?</h2>
+        <h2 style={{ fontFamily: C.font, fontSize: '1.65rem', fontWeight: 800, letterSpacing: '-0.025em', marginBottom: 32 }}>Why choose CryptoNorth?</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16 }}>
           {[
             { icon: '📊', title: 'Live CAD Prices', desc: 'Real-time prices for 500+ cryptocurrencies in Canadian dollars, updated every 30 seconds.' },
@@ -217,7 +217,7 @@ export default function Home() {
           ].map(f => (
             <div key={f.title} style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: 18, padding: 28 }}>
               <div style={{ width: 46, height: 46, borderRadius: 12, background: C.emeraldDim, border: `1px solid ${C.emeraldBorder}`, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 21, marginBottom: 16 }}>{f.icon}</div>
-              <div style={{ fontFamily: C.display, fontWeight: 700, fontSize: 15.5, marginBottom: 8 }}>{f.title}</div>
+              <div style={{ fontFamily: C.font, fontWeight: 700, fontSize: 15.5, marginBottom: 8 }}>{f.title}</div>
               <p style={{ fontSize: 13, color: C.muted, lineHeight: 1.7 }}>{f.desc}</p>
             </div>
           ))}
@@ -226,7 +226,7 @@ export default function Home() {
 
       {/* CTA */}
       <div id="tax" style={{ background: C.surface, borderTop: `1px solid ${C.border}`, borderBottom: `1px solid ${C.border}`, padding: '80px 32px', textAlign: 'center' }}>
-        <h2 style={{ fontFamily: C.display, fontSize: '2rem', fontWeight: 800, letterSpacing: '-0.025em', marginBottom: 14 }}>Ready to find the right exchange?</h2>
+        <h2 style={{ fontFamily: C.font, fontSize: '2rem', fontWeight: 800, letterSpacing: '-0.025em', marginBottom: 14 }}>Ready to find the right exchange?</h2>
         <p style={{ color: C.muted, fontSize: 16, maxWidth: 440, margin: '0 auto 32px' }}>Compare Canadian crypto exchanges side by side — fees, coins, security, and FINTRAC status.</p>
         <a href="#exchanges" style={{ background: C.emerald, color: '#fff', padding: '15px 36px', borderRadius: 9999, fontWeight: 700, fontSize: 15, display: 'inline-block' }}>Compare Canadian Exchanges →</a>
       </div>
@@ -235,7 +235,7 @@ export default function Home() {
       <footer style={{ background: '#070e1a', borderTop: `1px solid ${C.border}`, padding: '44px 32px' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 20 }}>
           <div>
-            <div style={{ fontFamily: C.display, fontWeight: 700, fontSize: 15 }}>🍁 CryptoNorth</div>
+            <div style={{ fontFamily: C.font, fontWeight: 700, fontSize: 15 }}>🍁 CryptoNorth</div>
             <div style={{ fontSize: 12, color: C.dim, marginTop: 3 }}>Canada's independent crypto resource</div>
           </div>
           <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>

@@ -9,7 +9,6 @@ const C = {
   font: "'Inter', system-ui, sans-serif",
 }
 
-// See full file at /app/exchanges/page.tsx
 export default function ExchangesPage() {
-  return <div style={{background: '#0b1220', color: '#f0f6ff', padding: 32, fontFamily: "'Inter', sans-serif"}}>Exchanges page loading...</div>
+  return <div style={{background:'#0b1220',color:'#f0f6ff',padding:32}}>Exchanges page coming soon!</div>
 }

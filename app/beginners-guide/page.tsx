@@ -6,23 +6,23 @@ const C = {bg:'#0b1220',surface:'#172033',surface2:'#1e2a3f',border:'rgba(255,25
 const faqs = [
   {q:'Is crypto legal in Canada?',a:'Yes. Cryptocurrency is legal in Canada. Exchanges must register with FINTRAC. The CRA taxes crypto gains as capital gains or business income.'},
   {q:'How much money do I need to start?',a:'Most Canadian exchanges have no minimum deposit. You can start with as little as $10 CAD. Bitcoin is divisible to 8 decimal places so you do not need to buy a whole coin.'},
-  {q:'Is crypto safe?',a:'Crypto on regulated Canadian exchanges (FINTRAC + CSA registered) has meaningful protections - but it is NOT insured by CDIC like a bank account. QuadrigaCX collapsed in 2019 and lost $169M CAD of Canadian funds. Use regulated exchanges and consider a hardware wallet for large holdings.'},
+  {q:'Is crypto safe?',a:'Crypto on regulated Canadian exchanges has meaningful protections - but it is NOT insured by CDIC like a bank account. QuadrigaCX collapsed in 2019 and lost $169M CAD of Canadian funds. Use regulated exchanges and consider a hardware wallet for large holdings.'},
   {q:'Do I pay tax on crypto in Canada?',a:'Yes. Buying and holding is not taxable, but selling, trading, or spending crypto triggers capital gains (50% inclusion rate for casual investors). Report all disposals on your T1. See our Tax Guide for details.'},
   {q:'What is Bitcoin?',a:'Bitcoin (BTC) is the first and largest cryptocurrency. Created in 2009, it is a decentralized digital currency with a fixed supply of 21 million coins. Many Canadians hold Bitcoin as a long-term store of value similar to digital gold.'},
-  {q:'What is Ethereum?',a:'Ethereum (ETH) is the second-largest cryptocurrency and a programmable blockchain that runs smart contracts and powers DeFi, NFTs, and thousands of applications. Ethereum moved to proof-of-stake in 2022, significantly reducing its energy use.'},
-  {q:'What is a blockchain?',a:'A blockchain is a public ledger of transactions maintained by thousands of computers simultaneously. Every transaction is recorded permanently and cannot be altered - making it transparent and tamper-resistant.'},
-  {q:'Should I buy Bitcoin or Ethereum first?',a:'For most Canadian beginners, Bitcoin is the most straightforward starting point - it is the most established, most liquid, and most widely understood crypto asset. Both are available on all major Canadian exchanges. Never invest more than you can afford to lose.'},
+  {q:'What is Ethereum?',a:'Ethereum (ETH) is the second-largest cryptocurrency and a programmable blockchain. Powers DeFi, NFTs, and thousands of applications. Moved to proof-of-stake in 2022, significantly reducing energy use.'},
+  {q:'What is a blockchain?',a:'A blockchain is a public ledger of transactions maintained by thousands of computers simultaneously. Every transaction is recorded permanently and cannot be altered.'},
+  {q:"Should I buy Bitcoin or Ethereum first?",a:'For most Canadian beginners, Bitcoin is the most straightforward starting point. Both are available on all major Canadian exchanges. Never invest more than you can afford to lose.'},
 ]
 
 export default function BeginnersGuidePage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const steps = [
     {n:'1',t:'Choose a Regulated Canadian Exchange',b:'Start with a FINTRAC and CSA-registered Canadian exchange. We recommend Bitbuy or Newton for beginners - both are Canadian-owned, easy to use, and support free Interac e-Transfer deposits.',link:'/exchanges',lt:'Compare Canadian Exchanges'},
-    {n:'2',t:'Create and Verify Your Account',b:'Sign up with your email. All regulated Canadian exchanges require identity verification (KYC) under FINTRAC rules - you will need government-issued ID and a selfie. This typically takes a few minutes to a few hours.',link:null,lt:null},
+    {n:'2',t:'Create and Verify Your Account',b:'Sign up with your email. All regulated Canadian exchanges require identity verification (KYC) under FINTRAC rules - you will need government-issued ID and a selfie.',link:null,lt:null},
     {n:'3',t:'Deposit Canadian Dollars',b:'Connect your Canadian bank via Interac e-Transfer (instant, free on most Canadian exchanges). Start with an amount you are comfortable potentially losing.',link:null,lt:null},
-    {n:'4',t:'Buy Your First Crypto',b:'Most beginners start with Bitcoin (BTC) or Ethereum (ETH). You do not need to buy a whole coin - you can buy $50 worth of Bitcoin and the exchange calculates your portion automatically.',link:null,lt:null},
-    {n:'5',t:'Understand Your Tax Obligations',b:'Buying and holding is not taxable. When you sell, trade, or spend crypto you may owe tax to the CRA. Keep records of every transaction - date, amount, and CAD value.',link:'/tax-guide',lt:'Read the Canada Crypto Tax Guide'},
-    {n:'6',t:'Consider a Hardware Wallet',b:'Once you hold meaningful amounts, consider moving long-term holdings off the exchange onto a hardware wallet. A Ledger Nano X (~$200 CAD) is the most popular choice for Canadians.',link:'/wallets',lt:'Learn About Crypto Wallets'},
+    {n:'4',t:'Buy Your First Crypto',b:'Most beginners start with Bitcoin (BTC) or Ethereum (ETH). You do not need to buy a whole coin - you can buy $50 worth and the exchange calculates your portion automatically.',link:null,lt:null},
+    {n:'5',t:'Understand Your Tax Obligations',b:'Buying and holding is not taxable. When you sell, trade, or spend crypto you may owe tax to the CRA. Keep records of every transaction.',link:'/tax-guide',lt:'Read the Canada Crypto Tax Guide'},
+    {n:'6',t:'Consider a Hardware Wallet',b:'Once you hold meaningful amounts, consider moving long-term holdings to a hardware wallet. A Ledger Nano X (~CAD $200) is the most popular choice for Canadians.',link:'/wallets',lt:'Learn About Crypto Wallets'},
   ]
   return (
     <div style={{fontFamily:C.font,background:C.bg,color:C.white,minHeight:'100vh'}}>
@@ -45,7 +45,7 @@ export default function BeginnersGuidePage() {
       </div>
       <div style={{maxWidth:1200,margin:'0 auto',padding:'56px 32px'}}>
         <section style={{marginBottom:56}}>
-          <h2 style={{fontSize:'1.5rem',fontWeight:700,color:C.white,marginBottom:20,paddingBottom:12,borderBottom:'1px solid '+C.border}}>How to Buy Crypto in Canada: Step by Step</h2>
+          <h2 style={{fontSize:'1.5rem',fontWeight:700,color:C.white,marginBottom:24,paddingBottom:12,borderBottom:'1px solid '+C.border}}>How to Buy Crypto in Canada: Step by Step</h2>
           <div style={{display:'flex',flexDirection:'column',gap:16}}>
             {steps.map(s=>(
               <div key={s.n} style={{display:'flex',gap:20,alignItems:'flex-start'}}>
@@ -53,7 +53,7 @@ export default function BeginnersGuidePage() {
                 <div style={{background:C.surface,border:'1px solid '+C.border,borderRadius:14,padding:'18px 22px',flex:1}}>
                   <div style={{fontWeight:600,fontSize:15,color:C.white,marginBottom:6}}>{s.t}</div>
                   <p style={{fontSize:13,color:C.muted,lineHeight:1.7,margin:'0 0 8px'}}>{s.b}</p>
-                  {s.link&&<a href={s.link} style={{fontSize:13,color:C.emerald,fontWeight:600,textDecoration:'none'}}>{s.lt} â</a>}
+                  {s.link&&<a href={s.link} style={{fontSize:13,color:C.emerald,fontWeight:600,textDecoration:'none'}}>{s.lt} →</a>}
                 </div>
               </div>
             ))}
@@ -63,12 +63,12 @@ export default function BeginnersGuidePage() {
           <h2 style={{fontSize:'1.5rem',fontWeight:700,color:C.white,marginBottom:20,paddingBottom:12,borderBottom:'1px solid '+C.border}}>What Makes Canada Different</h2>
           <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:16}}>
             {[
-              {icon:'ï¸',t:'FINTRAC Registration Required',b:'All exchanges serving Canadians must register with FINTRAC as Money Services Businesses under the PCMLTFA. This requires KYC identity verification and AML compliance.'},
-              {icon:'',t:'CRA Tax Obligations',b:'The CRA taxes crypto. 50% capital gains inclusion rate for casual investors (the 66.67% hike was cancelled March 21 2025). Report all disposals on your T1 by April 30 2026.'},
+              {icon:'🏛️',t:'FINTRAC Registration Required',b:'All exchanges serving Canadians must register with FINTRAC as Money Services Businesses. Required since June 2020. Requires KYC identity verification and AML compliance.'},
+              {icon:'📊',t:'CRA Tax Obligations',b:'The CRA taxes crypto. 50% capital gains inclusion rate for casual investors - the 66.67% hike was cancelled March 21 2025. Report all disposals on your T1 by April 30 2026.'},
               {icon:'🍁',t:'Interac e-Transfer Deposits',b:'Canadian exchanges accept Interac e-Transfer - the fastest and cheapest way to fund your account in CAD. Most offer free deposits. A major advantage for Canadians.'},
-              {icon:'â ï¸',t:'No CDIC Protection',b:'Crypto holdings on exchanges are NOT covered by CDIC (Canada Deposit Insurance Corporation). QuadrigaCX collapsed in 2019 losing $169M CAD. Only use regulated exchanges.'},
-              {icon:'ºï¸',t:'Provincial Regulation Varies',b:'Canada has no single national crypto license. Each provincial securities commission independently approves exchanges. Kraken is only approved in AB BC MB and SK - NOT Ontario or Quebec.'},
-              {icon:'',t:'CARF Starting 2026',b:'The Crypto-Asset Reporting Framework took effect January 1 2026. Canadian exchanges must now report user transaction data to the CRA. First filings expected in 2027.'},
+              {icon:'⚠️',t:'No CDIC Protection',b:'Crypto holdings on exchanges are NOT covered by CDIC. QuadrigaCX collapsed in 2019 losing $169M CAD. Only use regulated exchanges and consider a hardware wallet for large holdings.'},
+              {icon:'🗺️',t:'Provincial Regulation Varies',b:'Canada has no single national crypto license. Each province independently approves exchanges. Kraken is only approved in AB, BC, MB and SK - NOT Ontario or Quebec.'},
+              {icon:'📅',t:'CARF Starting 2026',b:'The Crypto-Asset Reporting Framework took effect January 1 2026. Canadian exchanges must now report user transaction data to the CRA. First filings expected in 2027.'},
             ].map(i=>(
               <div key={i.t} style={{background:C.surface,border:'1px solid '+C.border,borderRadius:14,padding:22}}>
                 <div style={{fontSize:22,marginBottom:10}}>{i.icon}</div>
@@ -94,14 +94,14 @@ export default function BeginnersGuidePage() {
         </section>
         <div style={{background:'rgba(239,68,68,0.06)',border:'1px solid rgba(239,68,68,0.2)',borderRadius:12,padding:'16px 20px'}}>
           <div style={{fontWeight:600,color:'#ef4444',marginBottom:6,fontSize:14}}>Important Disclaimer</div>
-          <p style={{fontSize:13,color:C.muted,lineHeight:1.7,margin:0}}>This guide is for informational purposes only. Cryptocurrency is highly volatile and speculative - you can lose your entire investment. Never invest more than you can afford to lose. Regulatory information accurate as of April 2026 and may change.</p>
+          <p style={{fontSize:13,color:C.muted,lineHeight:1.7,margin:0}}>This guide is for informational purposes only. Cryptocurrency is highly volatile - you can lose your entire investment. Never invest more than you can afford to lose. Regulatory information accurate as of April 2026 and may change.</p>
         </div>
       </div>
       <footer style={{background:'#070e1a',borderTop:'1px solid '+C.border,padding:'44px 32px'}}>
         <div style={{maxWidth:1200,margin:'0 auto',display:'flex',justifyContent:'space-between',alignItems:'center',flexWrap:'wrap',gap:20}}>
           <div><div style={{fontWeight:700,fontSize:16}}>🍁 CryptoNorth</div><div style={{fontSize:12,color:C.dim,marginTop:3}}>Canada's independent crypto resource</div></div>
           <div style={{display:'flex',gap:24,flexWrap:'wrap'}}>{[['/','Home'],['/exchanges','Exchanges'],['/tax-guide','Tax Guide'],['/wallets','Wallets'],['/beginners-guide',"Beginner's Guide"]].map(([h,l])=><a key={l} href={h} style={{fontSize:13,color:C.dim,textDecoration:'none'}}>{l}</a>)}</div>
-          <div style={{fontSize:11,color:'#2a3a52',width:'100%',marginTop:8}}>Â© 2026 CryptoNorth. Not financial or legal advice. Information current as of April 2026.</div>
+          <div style={{fontSize:11,color:'#2a3a52',width:'100%',marginTop:8}}>© 2026 CryptoNorth. Not financial or legal advice. Information current as of April 2026.</div>
         </div>
       </footer>
     </div>

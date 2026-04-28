@@ -8,7 +8,7 @@ export default function TaxGuidePage() {
       <nav style={{position:'sticky',top:0,zIndex:100,background:'rgba(11,18,32,0.95)',backdropFilter:'blur(16px)',borderBottom:'1px solid '+C.border}}>
         <div style={{maxWidth:1200,margin:'0 auto',padding:'0 32px',display:'flex',alignItems:'center',justifyContent:'space-between',height:68}}>
           <a href="/" style={{display:'flex',alignItems:'center',gap:10,fontWeight:700,fontSize:18,color:C.white,textDecoration:'none'}}>
-            <div style={{width:36,height:36,background:C.emerald,borderRadius:8,display:'flex',alignItems:'center',justifyContent:'center',fontSize:18,filter:'grayscale(1) brightness(10)'}}>🍁</div>
+            <div style={{width:36,height:36,background:C.emerald,borderRadius:8,display:'flex',alignItems:'center',justifyContent:'center'}}><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style={{width:22,height:22}}><path fill="white" d="M50 5 L58 30 L85 20 L70 42 L95 45 L75 58 L80 80 L50 68 L20 80 L25 58 L5 45 L30 42 L15 20 L42 30 Z"/></svg></div>
             Crypto<span style={{color:C.emerald}}>North</span>
           </a>
           <div style={{display:'flex'}}>{[['/','Home'],['/exchanges','Exchanges'],['/tax-guide','Tax Guide'],['/wallets','Wallets'],['/beginners-guide',"Beginner's Guide"]].map(([h,l])=><a key={l} href={h} style={{color:h==='/tax-guide'?C.white:C.muted,fontSize:14,fontWeight:h==='/tax-guide'?600:500,padding:'0 14px',height:68,display:'flex',alignItems:'center',textDecoration:'none'}}>{l}</a>)}</div>

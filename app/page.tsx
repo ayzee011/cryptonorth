@@ -44,7 +44,7 @@ export default function Home() {
       <nav style={{position:'sticky',top:0,zIndex:100,background:'rgba(11,18,32,0.95)',backdropFilter:'blur(16px)',borderBottom:'1px solid '+C.border}}>
         <div style={{maxWidth:1200,margin:'0 auto',padding:'0 32px',display:'flex',alignItems:'center',justifyContent:'space-between',height:68,gap:24}}>
           <a href="/" style={{display:'flex',alignItems:'center',gap:10,fontWeight:700,fontSize:18,letterSpacing:'-0.02em',flexShrink:0,color:C.white,textDecoration:'none'}}>
-            <div style={{width:36,height:36,background:C.emerald,borderRadius:8,display:'flex',alignItems:'center',justifyContent:'center',fontSize:18,filter:'grayscale(1) brightness(10)'}}>🍁</div>
+            <div style={{width:36,height:36,background:C.emerald,borderRadius:8,display:'flex',alignItems:'center',justifyContent:'center'}}><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style={{width:22,height:22}}><path fill="white" d="M50 5 L58 30 L85 20 L70 42 L95 45 L75 58 L80 80 L50 68 L20 80 L25 58 L5 45 L30 42 L15 20 L42 30 Z"/></svg></div>
             Crypto<span style={{color:C.emerald}}>North</span>
           </a>
           <div style={{display:'flex'}}>
@@ -162,7 +162,7 @@ export default function Home() {
       <footer style={{background:'#070e1a',borderTop:'1px solid '+C.border,padding:'44px 32px'}}>
         <div style={{maxWidth:1200,margin:'0 auto',display:'flex',justifyContent:'space-between',alignItems:'center',flexWrap:'wrap',gap:20}}>
           <div>
-            <div style={{fontWeight:700,fontSize:16}}>🍁 CryptoNorth</div>
+            <div style={{fontWeight:700,fontSize:16,display:'flex',alignItems:'center',gap:8}}><div style={{width:20,height:20,background:C.emerald,borderRadius:4,display:'flex',alignItems:'center',justifyContent:'center'}}><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style={{width:12,height:12}}><path fill="white" d="M50 5 L58 30 L85 20 L70 42 L95 45 L75 58 L80 80 L50 68 L20 80 L25 58 L5 45 L30 42 L15 20 L42 30 Z"/></svg></div>CryptoNorth</div>
             <div style={{fontSize:12,color:C.dim,marginTop:3}}>Canada's independent crypto resource</div>
           </div>
           <div style={{display:'flex',gap:24,flexWrap:'wrap'}}>

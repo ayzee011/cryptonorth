@@ -5,7 +5,7 @@ const C = {
   bg: '#0b1220', surface: '#111d30', surface2: '#162238',
   border: 'rgba(255,255,255,0.07)', emerald: '#10b981',
   emeraldDim: 'rgba(16,185,129,0.1)', emeraldBorder: 'rgba(16,185,129,0.28)',
-  white: '#f0f6ff', muted: '#7a8fa8', dim: '#3a506b',
+  white: '#f0f6ff', muted: '#8ca0b8', dim: '#3a506b',
   font: "'Inter', system-ui, -apple-system, sans-serif",
 }
 
@@ -189,9 +189,16 @@ export default function Home() {
 
         {/* 2-COL GRID */}
         <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:16}}>
-          {others.map(e=>(
+          {others.map((e,ei)=>(
+            ei === others.length - 1 && others.length % 2 !== 0 ? null : null) && null}
+          {others.map((e,ei)=>(
+            <div key={e.name + 'wrap'} style={{gridColumn: ei === others.length-1 && others.length%2!==0 ? '1 / -1' : 'auto'}}>
+            </div>
+          ))}
+          {others.map((e,ei)=>(
+
             <div key={e.name}
-              style={{background:C.surface,border:'1px solid '+C.border,borderRadius:20,padding:'28px 30px',transition:'border-color 0.2s,transform 0.15s,box-shadow 0.15s',display:'flex',flexDirection:'column'}}
+              style={{background:C.surface,border:'1px solid '+C.border,borderRadius:20,padding:'28px 30px',transition:'border-color 0.2s,transform 0.15s,box-shadow 0.15s',display:'flex',flexDirection:'column',gridColumn:ei===others.length-1&&others.length%2!==0?'1 / -1':'auto'}}
               onMouseEnter={e2=>{e2.currentTarget.style.borderColor='rgba(16,185,129,0.35)';e2.currentTarget.style.transform='translateY(-3px)';e2.currentTarget.style.boxShadow='0 16px 48px rgba(0,0,0,0.35)'}}
               onMouseLeave={e2=>{e2.currentTarget.style.borderColor=C.border;e2.currentTarget.style.transform='none';e2.currentTarget.style.boxShadow='none'}}
             >
@@ -244,7 +251,7 @@ export default function Home() {
                 style={{background:C.bg,border:'1px solid '+C.border,borderRadius:20,padding:'32px 28px',transition:'border-color 0.2s,transform 0.15s'}}
                 onMouseEnter={e=>{e.currentTarget.style.borderColor='rgba(16,185,129,0.3)';e.currentTarget.style.transform='translateY(-2px)'}}
                 onMouseLeave={e=>{e.currentTarget.style.borderColor=C.border;e.currentTarget.style.transform='none'}}>
-                <div style={{width:52,height:52,borderRadius:14,background:C.emeraldDim,border:'1px solid '+C.emeraldBorder,display:'flex',alignItems:'center',justifyContent:'center',fontSize:24,marginBottom:20}}>{f.icon}</div>
+                <div style={{width:56,height:56,borderRadius:16,background:C.emeraldDim,border:'1px solid '+C.emeraldBorder,display:'flex',alignItems:'center',justifyContent:'center',fontSize:26,marginBottom:22}}>{f.icon}</div>
                 <div style={{fontWeight:700,fontSize:16,letterSpacing:'-0.01em',marginBottom:10,color:C.white}}>{f.t}</div>
                 <p style={{fontSize:13,color:C.muted,lineHeight:1.8,margin:0}}>{f.d}</p>
               </div>

@@ -15,26 +15,10 @@ const Logo = () => (
   </div>
 )
 
-const Nav = () => (
-  <nav style={{position:'sticky',top:0,zIndex:100,background:'rgba(11,18,32,0.97)',backdropFilter:'blur(20px)',borderBottom:'1px solid '+C.border}}>
-    <div style={{maxWidth:1200,margin:'0 auto',padding:'0 32px',display:'flex',alignItems:'center',justifyContent:'space-between',height:68,gap:32}}>
-      <a href="/" style={{display:'flex',alignItems:'center',gap:10,fontWeight:800,fontSize:18,letterSpacing:'-0.03em',color:C.white,textDecoration:'none',flexShrink:0}}>
-        <Logo/>Crypto<span style={{color:C.emerald}}>North</span>
-      </a>
-      <div style={{display:'flex'}}>
-        {[['/','Home'],['/exchanges','Exchanges'],['/tax-guide','Tax Guide'],['/wallets','Wallets'],['/beginners-guide',"Beginner's Guide"]].map(([h,l])=>(
-          <a key={l} href={h} style={{color:C.muted,fontSize:14,fontWeight:500,padding:'0 16px',height:68,display:'flex',alignItems:'center',whiteSpace:'nowrap',textDecoration:'none'}}
-            onMouseEnter={e=>(e.currentTarget.style.color=C.white)} onMouseLeave={e=>(e.currentTarget.style.color=C.muted)}>{l}</a>
-        ))}
-      </div>
-      <a href="/exchanges" style={{background:C.emerald,color:'#fff',padding:'0 22px',height:40,borderRadius:9999,fontWeight:700,fontSize:13,display:'flex',alignItems:'center',whiteSpace:'nowrap',flexShrink:0,textDecoration:'none'}}
-        onMouseEnter={e=>(e.currentTarget.style.opacity='0.85')} onMouseLeave={e=>(e.currentTarget.style.opacity='1')}>Compare Exchanges</a>
-    </div>
-  </nav>
-)
+const navLinks = [['/', 'Home'],['/exchanges','Exchanges'],['/tax-guide','Tax Guide'],['/wallets','Wallets'],['/beginners-guide',"Beginner's Guide"]]
 
 const others = [
-  {name:'Newton',fee:'0.25–0.60%',coins:'70+',bestFor:'Intermediate',rating:4.4,stars:'★★★★☆',pros:['FINTRAC + CSA registered','70+ coins with CAD pairs','Free Interac e-Transfer','No deposit or withdrawal fees'],cons:['No staking','Spread widens on large orders'],province:null,url:'#'},
+  {name:'Newton',fee:'0.25–0.60%',coins:'70+',bestFor:'Intermediate',rating:4.4,stars:'★★★★☆',pros:['FINTRAC + CSA registered','70+ coins with CAD pairs','Free Interac e-Transfer','No deposit or withdrawal fees'],cons:['No staking rewards','Spread widens on large orders'],province:null,url:'#'},
   {name:'NDAX',fee:'0.20% flat',coins:'50+',bestFor:'Low-fee traders',rating:4.1,stars:'★★★★☆',pros:['Flat 0.20% trading fee','Staking available','Advanced order types','FINTRAC + CSA registered'],cons:['Less beginner-friendly UI','Lower liquidity on some pairs'],province:null,url:'#'},
   {name:'Shakepay',fee:'0% + spread',coins:'BTC, ETH',bestFor:'Bitcoin beginners',rating:4.3,stars:'★★★★☆',pros:['Zero explicit fees','Shakesats Bitcoin cashback','Instant Interac e-Transfer','Simplest app in Canada'],cons:['BTC and ETH only','Spread cost hidden in price'],province:null,url:'#'},
   {name:'Wealthsimple',fee:'1.5–2.0%',coins:'50+',bestFor:'Existing WS users',rating:4.2,stars:'★★★★☆',pros:['Trusted Canadian brand','Integrated with WS stocks and ETFs','ETH and SOL staking'],cons:['Highest fees (1.5–2%)','No advanced trading tools'],province:null,url:'#'},
@@ -61,9 +45,23 @@ export default function Home() {
 
   return (
     <div style={{fontFamily:C.font,background:C.bg,color:C.white,minHeight:'100vh'}}>
-      <Nav/>
 
-      {/* HERO */}
+      <nav style={{position:'sticky',top:0,zIndex:100,background:'rgba(11,18,32,0.97)',backdropFilter:'blur(20px)',borderBottom:'1px solid '+C.border}}>
+        <div style={{maxWidth:1200,margin:'0 auto',padding:'0 32px',display:'flex',alignItems:'center',justifyContent:'space-between',height:68,gap:32}}>
+          <a href="/" style={{display:'flex',alignItems:'center',gap:10,fontWeight:800,fontSize:18,letterSpacing:'-0.03em',color:C.white,textDecoration:'none',flexShrink:0}}>
+            <Logo/>Crypto<span style={{color:C.emerald}}>North</span>
+          </a>
+          <div style={{display:'flex'}}>
+            {navLinks.map(([h,l])=>(
+              <a key={l} href={h} style={{color:C.muted,fontSize:14,fontWeight:500,padding:'0 16px',height:68,display:'flex',alignItems:'center',whiteSpace:'nowrap',textDecoration:'none'}}
+                onMouseEnter={e=>(e.currentTarget.style.color=C.white)} onMouseLeave={e=>(e.currentTarget.style.color=C.muted)}>{l}</a>
+            ))}
+          </div>
+          <a href="/exchanges" style={{background:C.emerald,color:'#fff',padding:'0 22px',height:40,borderRadius:9999,fontWeight:700,fontSize:13,display:'flex',alignItems:'center',whiteSpace:'nowrap',flexShrink:0,textDecoration:'none'}}
+            onMouseEnter={e=>(e.currentTarget.style.opacity='0.85')} onMouseLeave={e=>(e.currentTarget.style.opacity='1')}>Compare Exchanges</a>
+        </div>
+      </nav>
+
       <div style={{maxWidth:1200,margin:'0 auto',padding:'88px 32px 80px',display:'grid',gridTemplateColumns:'1fr 420px',gap:64,alignItems:'center'}}>
         <div>
           <div style={{display:'inline-flex',alignItems:'center',gap:8,background:C.emeraldDim,border:'1px solid '+C.emeraldBorder,color:C.emerald,fontSize:11,fontWeight:700,borderRadius:9999,padding:'6px 14px',marginBottom:28,letterSpacing:'0.07em',textTransform:'uppercase'}}>
@@ -72,18 +70,17 @@ export default function Home() {
           <h1 style={{fontSize:'clamp(2.4rem,4vw,3.6rem)',fontWeight:800,lineHeight:1.1,letterSpacing:'-0.035em',color:C.white,margin:'0 0 22px'}}>
             The best Canadian<br/><span style={{color:C.emerald}}>crypto exchanges,</span><br/>ranked for you.
           </h1>
-          <p style={{fontSize:17,color:C.muted,lineHeight:1.8,maxWidth:440,margin:'0 0 40px',fontWeight:400}}>
+          <p style={{fontSize:17,color:C.muted,lineHeight:1.8,maxWidth:440,margin:'0 0 40px'}}>
             Unbiased reviews of every FINTRAC-registered exchange. Real CAD fees, honest pros and cons, and up-to-date CRA tax guidance. No U.S. bias, no fluff.
           </p>
           <div style={{display:'flex',gap:12}}>
-            <a href="/exchanges" style={{background:C.emerald,color:'#fff',padding:'14px 28px',borderRadius:12,fontWeight:700,fontSize:15,display:'inline-flex',alignItems:'center',gap:8,textDecoration:'none'}}
+            <a href="/exchanges" style={{background:C.emerald,color:'#fff',padding:'14px 28px',borderRadius:12,fontWeight:700,fontSize:15,display:'inline-flex',alignItems:'center',textDecoration:'none'}}
               onMouseEnter={e=>(e.currentTarget.style.opacity='0.88')} onMouseLeave={e=>(e.currentTarget.style.opacity='1')}>Find the Best Exchange →</a>
             <a href="/tax-guide" style={{background:'transparent',color:C.white,padding:'14px 24px',borderRadius:12,fontWeight:600,fontSize:15,border:'1.5px solid rgba(255,255,255,0.15)',display:'inline-flex',alignItems:'center',textDecoration:'none'}}
               onMouseEnter={e=>(e.currentTarget.style.borderColor='rgba(255,255,255,0.4)')} onMouseLeave={e=>(e.currentTarget.style.borderColor='rgba(255,255,255,0.15)')}>2026 Tax Guide</a>
           </div>
         </div>
 
-        {/* MARKET CARD */}
         <div style={{background:C.surface,border:'1px solid '+C.border,borderRadius:24,padding:32,boxShadow:'0 32px 80px rgba(0,0,0,0.5)'}}>
           <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:24}}>
             <span style={{fontSize:11,color:C.dim,fontWeight:700,letterSpacing:'0.1em',textTransform:'uppercase'}}>Live Prices · CAD</span>
@@ -120,7 +117,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* STATS BAR */}
       <div style={{borderTop:'1px solid '+C.border,borderBottom:'1px solid '+C.border,background:C.surface}}>
         <div style={{maxWidth:1200,margin:'0 auto',padding:'0 32px',display:'grid',gridTemplateColumns:'repeat(4,1fr)'}}>
           {[['6+','FINTRAC-registered exchanges reviewed'],['100%','CAD on-ramps — no USD conversion needed'],['50%','Capital gains inclusion rate for 2025'],['$0','Minimum deposit on most platforms']].map(([n,l],i)=>(
@@ -132,7 +128,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* EXCHANGE SECTION */}
       <div style={{maxWidth:1200,margin:'0 auto',padding:'72px 32px 80px'}}>
         <div style={{display:'flex',justifyContent:'space-between',alignItems:'baseline',marginBottom:36}}>
           <div>
@@ -142,12 +137,9 @@ export default function Home() {
           <a href="/exchanges" style={{color:C.emerald,fontSize:14,fontWeight:600,textDecoration:'none',whiteSpace:'nowrap',flexShrink:0}}>Full comparison →</a>
         </div>
 
-        {/* BITBUY HERO */}
         <div style={{background:'linear-gradient(135deg,#0c2a1a 0%,#091e2d 60%,#0b1220 100%)',border:'1px solid rgba(16,185,129,0.4)',borderRadius:24,padding:'40px 44px',marginBottom:24,position:'relative',overflow:'hidden'}}>
           <div style={{position:'absolute',top:0,right:0,width:500,height:300,background:'radial-gradient(ellipse at 90% 10%,rgba(16,185,129,0.1) 0%,transparent 65%)',pointerEvents:'none'}}/>
-          <div style={{position:'absolute',top:0,left:0,width:300,height:200,background:'radial-gradient(ellipse at 10% 0%,rgba(16,185,129,0.05) 0%,transparent 60%)',pointerEvents:'none'}}/>
           <div style={{position:'absolute',top:18,right:24,background:C.emerald,color:'#fff',fontSize:11,fontWeight:800,padding:'5px 14px',borderRadius:9999,letterSpacing:'0.05em'}}>★ TOP PICK — EDITOR'S CHOICE</div>
-
           <div style={{display:'grid',gridTemplateColumns:'1fr 280px 200px',gap:44,alignItems:'start',position:'relative'}}>
             <div>
               <div style={{fontSize:11,color:C.emerald,fontWeight:700,letterSpacing:'0.08em',textTransform:'uppercase',marginBottom:10}}>#1 Recommended for Canadian Beginners</div>
@@ -160,7 +152,6 @@ export default function Home() {
                 ))}
               </div>
             </div>
-
             <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:10}}>
               {[['Trading Fee','0.20%'],['Maker Fee','0.10%'],['Min. Deposit','None'],['Coins','40+'],['Interac','Free'],['Provinces','All']].map(([k,v])=>(
                 <div key={k} style={{background:'rgba(255,255,255,0.05)',borderRadius:10,padding:'12px 14px',border:'1px solid rgba(255,255,255,0.07)'}}>
@@ -169,36 +160,23 @@ export default function Home() {
                 </div>
               ))}
             </div>
-
             <div style={{display:'flex',flexDirection:'column',gap:14}}>
-              <a href="#"
-                style={{background:C.emerald,color:'#fff',borderRadius:12,padding:'16px 20px',fontWeight:700,fontSize:15,textAlign:'center',textDecoration:'none',display:'block',letterSpacing:'-0.01em'}}
-                onMouseEnter={e=>(e.currentTarget.style.opacity='0.88')} onMouseLeave={e=>(e.currentTarget.style.opacity='1')}
-              >Sign up with Bitbuy →</a>
-              <div style={{fontSize:11,color:C.dim,textAlign:'center',lineHeight:1.5}}>Affiliate link — we may earn a commission at no cost to you</div>
+              <a href="#" style={{background:C.emerald,color:'#fff',borderRadius:12,padding:'16px 20px',fontWeight:700,fontSize:15,textAlign:'center',textDecoration:'none',display:'block'}}
+                onMouseEnter={e=>(e.currentTarget.style.opacity='0.88')} onMouseLeave={e=>(e.currentTarget.style.opacity='1')}>Sign up with Bitbuy →</a>
+              <div style={{fontSize:11,color:C.dim,textAlign:'center',lineHeight:1.5}}>Affiliate link — no extra cost to you</div>
               <div style={{borderTop:'1px solid rgba(255,255,255,0.08)',paddingTop:14,display:'flex',flexDirection:'column',gap:6}}>
                 {['Canadian-owned since 2016','Free CAD deposits via Interac','Insured cold storage custody','Clean beginner dashboard'].map(p=>(
-                  <div key={p} style={{fontSize:12,color:C.emerald,display:'flex',alignItems:'center',gap:6}}>
-                    <span style={{fontWeight:700}}>✓</span>{p}
-                  </div>
+                  <div key={p} style={{fontSize:12,color:C.emerald,display:'flex',alignItems:'center',gap:6}}><span style={{fontWeight:700}}>✓</span>{p}</div>
                 ))}
               </div>
             </div>
           </div>
         </div>
 
-        {/* 2-COL GRID */}
         <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:16}}>
-          {others.map((e,ei)=>(
-            ei === others.length - 1 && others.length % 2 !== 0 ? null : null) && null}
-          {others.map((e,ei)=>(
-            <div key={e.name + 'wrap'} style={{gridColumn: ei === others.length-1 && others.length%2!==0 ? '1 / -1' : 'auto'}}>
-            </div>
-          ))}
-          {others.map((e,ei)=>(
-
+          {others.slice(0,4).map(e=>(
             <div key={e.name}
-              style={{background:C.surface,border:'1px solid '+C.border,borderRadius:20,padding:'28px 30px',transition:'border-color 0.2s,transform 0.15s,box-shadow 0.15s',display:'flex',flexDirection:'column',gridColumn:ei===others.length-1&&others.length%2!==0?'1 / -1':'auto'}}
+              style={{background:C.surface,border:'1px solid '+C.border,borderRadius:20,padding:'28px 30px',transition:'border-color 0.2s,transform 0.15s,box-shadow 0.15s',display:'flex',flexDirection:'column'}}
               onMouseEnter={e2=>{e2.currentTarget.style.borderColor='rgba(16,185,129,0.35)';e2.currentTarget.style.transform='translateY(-3px)';e2.currentTarget.style.boxShadow='0 16px 48px rgba(0,0,0,0.35)'}}
               onMouseLeave={e2=>{e2.currentTarget.style.borderColor=C.border;e2.currentTarget.style.transform='none';e2.currentTarget.style.boxShadow='none'}}
             >
@@ -209,8 +187,7 @@ export default function Home() {
                 </div>
                 <span style={{fontSize:10,fontWeight:700,padding:'4px 10px',borderRadius:6,background:C.emeraldDim,color:C.emerald,border:'1px solid '+C.emeraldBorder,whiteSpace:'nowrap'}}>FINTRAC + CSA</span>
               </div>
-
-              <div style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:8,marginBottom:18}}>
+              <div style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:8,marginBottom:16}}>
                 {[['Fee',e.fee],['Coins',e.coins],['Best for',e.bestFor]].map(([k,v])=>(
                   <div key={k} style={{background:'rgba(255,255,255,0.04)',borderRadius:8,padding:'10px 12px',border:'1px solid '+C.border}}>
                     <div style={{fontSize:10,color:C.dim,marginBottom:3,fontWeight:600,textTransform:'uppercase',letterSpacing:'0.04em'}}>{k}</div>
@@ -218,14 +195,10 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-
-              <div style={{marginBottom:18,flex:1}}>
-                {e.pros.map(p=><div key={p} style={{fontSize:13,color:C.emerald,marginBottom:5,display:'flex',gap:6,alignItems:'flex-start'}}><span style={{fontWeight:700,flexShrink:0}}>✓</span>{p}</div>)}
-                {e.cons.map(c=><div key={c} style={{fontSize:13,color:'#f87171',marginBottom:5,display:'flex',gap:6,alignItems:'flex-start'}}><span style={{fontWeight:700,flexShrink:0}}>✗</span>{c}</div>)}
+              <div style={{marginBottom:16,flex:1}}>
+                {e.pros.map(p=><div key={p} style={{fontSize:13,color:C.emerald,marginBottom:4,display:'flex',gap:6}}><span style={{fontWeight:700,flexShrink:0}}>✓</span>{p}</div>)}
+                {e.cons.map(c=><div key={c} style={{fontSize:13,color:'#f87171',marginBottom:4,display:'flex',gap:6}}><span style={{fontWeight:700,flexShrink:0}}>✗</span>{c}</div>)}
               </div>
-
-              {e.province&&<div style={{fontSize:12,color:'#f59e0b',background:'rgba(245,158,11,0.08)',border:'1px solid rgba(245,158,11,0.2)',borderRadius:8,padding:'8px 12px',marginBottom:14}}>⚠️ Available in {e.province}</div>}
-
               <a href={e.url} target="_blank" rel="noopener noreferrer"
                 style={{display:'block',background:C.emerald,color:'#fff',borderRadius:10,padding:'13px 0',fontWeight:700,fontSize:13,textAlign:'center',textDecoration:'none',transition:'opacity 0.15s'}}
                 onMouseEnter={e2=>(e2.currentTarget.style.opacity='0.85')} onMouseLeave={e2=>(e2.currentTarget.style.opacity='1')}
@@ -234,17 +207,52 @@ export default function Home() {
             </div>
           ))}
         </div>
+
+        {others.slice(4).map(e=>(
+          <div key={e.name}
+            style={{background:C.surface,border:'1px solid '+C.border,borderRadius:20,padding:'28px 30px',marginTop:16,transition:'border-color 0.2s,transform 0.15s,box-shadow 0.15s',display:'grid',gridTemplateColumns:'1fr 1fr auto',gap:32,alignItems:'start'}}
+            onMouseEnter={e2=>{e2.currentTarget.style.borderColor='rgba(16,185,129,0.35)';e2.currentTarget.style.transform='translateY(-2px)';e2.currentTarget.style.boxShadow='0 12px 40px rgba(0,0,0,0.3)'}}
+            onMouseLeave={e2=>{e2.currentTarget.style.borderColor=C.border;e2.currentTarget.style.transform='none';e2.currentTarget.style.boxShadow='none'}}
+          >
+            <div>
+              <div style={{display:'flex',alignItems:'center',gap:14,marginBottom:12}}>
+                <div style={{fontWeight:800,fontSize:22,letterSpacing:'-0.02em',color:C.white}}>{e.name}</div>
+                <div style={{color:'#f59e0b',fontSize:14}}>{e.stars} <span style={{color:C.dim,fontSize:12}}>{e.rating}/5</span></div>
+                <span style={{fontSize:10,fontWeight:700,padding:'4px 10px',borderRadius:6,background:C.emeraldDim,color:C.emerald,border:'1px solid '+C.emeraldBorder}}>FINTRAC + CSA</span>
+                {e.province&&<span style={{fontSize:11,color:'#f59e0b',background:'rgba(245,158,11,0.08)',border:'1px solid rgba(245,158,11,0.2)',borderRadius:6,padding:'4px 10px'}}>⚠️ {e.province}</span>}
+              </div>
+              <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:8}}>
+                {[['Fee',e.fee],['Coins',e.coins],['Best for',e.bestFor]].map(([k,v])=>(
+                  <div key={k} style={{background:'rgba(255,255,255,0.04)',borderRadius:8,padding:'10px 12px',border:'1px solid '+C.border}}>
+                    <div style={{fontSize:10,color:C.dim,marginBottom:3,fontWeight:600,textTransform:'uppercase',letterSpacing:'0.04em'}}>{k}</div>
+                    <div style={{fontSize:12,fontWeight:700,color:C.white}}>{v}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div>
+              {e.pros.map(p=><div key={p} style={{fontSize:13,color:C.emerald,marginBottom:4,display:'flex',gap:6}}><span style={{fontWeight:700,flexShrink:0}}>✓</span>{p}</div>)}
+              {e.cons.map(c=><div key={c} style={{fontSize:13,color:'#f87171',marginBottom:4,display:'flex',gap:6}}><span style={{fontWeight:700,flexShrink:0}}>✗</span>{c}</div>)}
+            </div>
+            <div style={{display:'flex',flexDirection:'column',gap:8,minWidth:180}}>
+              <a href={e.url} target="_blank" rel="noopener noreferrer"
+                style={{display:'block',background:C.emerald,color:'#fff',borderRadius:10,padding:'13px 20px',fontWeight:700,fontSize:13,textAlign:'center',textDecoration:'none',transition:'opacity 0.15s'}}
+                onMouseEnter={e2=>(e2.currentTarget.style.opacity='0.85')} onMouseLeave={e2=>(e2.currentTarget.style.opacity='1')}
+              >Sign up with referral →</a>
+              <div style={{fontSize:11,color:C.dim,textAlign:'center'}}>Affiliate link — no extra cost to you</div>
+            </div>
+          </div>
+        ))}
       </div>
 
-      {/* TRUST SECTION */}
       <div style={{borderTop:'1px solid '+C.border,background:C.surface}}>
         <div style={{maxWidth:1200,margin:'0 auto',padding:'72px 32px'}}>
           <h2 style={{fontSize:'1.7rem',fontWeight:800,letterSpacing:'-0.03em',marginBottom:8,textAlign:'center'}}>Why Canadians use CryptoNorth</h2>
-          <p style={{fontSize:15,color:C.muted,textAlign:'center',margin:'0 0 48px',lineHeight:1.6}}>We research what actually matters to Canadian investors — CAD fees, FINTRAC status, and CRA tax clarity.</p>
+          <p style={{fontSize:15,color:C.muted,textAlign:'center',margin:'0 0 48px',lineHeight:1.6}}>We research what matters to Canadian investors — CAD fees, FINTRAC status, and CRA tax clarity.</p>
           <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:20}}>
             {[
               {icon:'🏛️',t:'FINTRAC and CSA Only',d:'We only list exchanges registered with FINTRAC and approved by provincial securities regulators. No offshore platforms, no unregistered operators — ever.'},
-              {icon:'📋',t:'CRA Tax Guidance Built In',d:'Plain-English guidance on the 50% capital gains inclusion rate, ACB method, T1 filing, and CARF 2026 reporting requirements — all verified for the 2025 tax year.'},
+              {icon:'📋',t:'CRA Tax Guidance Built In',d:'Plain-English guidance on the 50% capital gains inclusion rate, ACB method, T1 filing, and CARF 2026 reporting — all verified for the 2025 tax year.'},
               {icon:'🍁',t:'Canadian Through and Through',d:'CAD prices, Interac e-Transfer focus, province-by-province availability, and honest takes on which exchanges actually serve Canadians well.'},
             ].map(f=>(
               <div key={f.t}
@@ -260,7 +268,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* CTA */}
       <div style={{background:'linear-gradient(135deg,#0c2a1a 0%,#0b1220 100%)',borderTop:'1px solid rgba(16,185,129,0.2)',padding:'80px 32px',textAlign:'center'}}>
         <h2 style={{fontSize:'2rem',fontWeight:800,letterSpacing:'-0.03em',marginBottom:12,color:C.white}}>Ready to buy crypto in Canada?</h2>
         <p style={{color:C.muted,fontSize:16,maxWidth:440,margin:'0 auto 36px',lineHeight:1.75}}>Compare regulated Canadian exchanges side by side — honest fees, real pros and cons, no U.S. bias.</p>
@@ -272,13 +279,12 @@ export default function Home() {
         </div>
       </div>
 
-      {/* FOOTER */}
       <footer style={{background:'#070d1a',borderTop:'1px solid '+C.border,padding:'48px 32px 40px'}}>
         <div style={{maxWidth:1200,margin:'0 auto'}}>
           <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',flexWrap:'wrap',gap:24,marginBottom:32}}>
             <a href="/" style={{display:'flex',alignItems:'center',gap:10,fontWeight:800,fontSize:17,letterSpacing:'-0.03em',color:C.white,textDecoration:'none'}}><Logo/>Crypto<span style={{color:C.emerald}}>North</span></a>
             <div style={{display:'flex',gap:28,flexWrap:'wrap'}}>
-              {[['/','Home'],['/exchanges','Exchanges'],['/tax-guide','Tax Guide'],['/wallets','Wallets'],['/beginners-guide',"Beginner's Guide"]].map(([h,l])=>(
+              {navLinks.map(([h,l])=>(
                 <a key={l} href={h} style={{fontSize:13,color:C.muted,textDecoration:'none',fontWeight:500}}
                   onMouseEnter={e=>(e.currentTarget.style.color=C.white)} onMouseLeave={e=>(e.currentTarget.style.color=C.muted)}>{l}</a>
               ))}

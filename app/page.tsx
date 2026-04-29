@@ -62,7 +62,7 @@ export default function Home() {
         </div>
       </nav>
 
-      <div style={{maxWidth:1200,margin:'0 auto',padding:'88px 32px 80px',display:'grid',gridTemplateColumns:'1fr 420px',gap:64,alignItems:'center'}}>
+      <div style={{maxWidth:1200,margin:'0 auto',padding:'64px 32px 72px',display:'grid',gridTemplateColumns:'1fr 420px',gap:64,alignItems:'center'}}>
         <div>
           <div style={{display:'inline-flex',alignItems:'center',gap:8,background:C.emeraldDim,border:'1px solid '+C.emeraldBorder,color:C.emerald,fontSize:11,fontWeight:700,borderRadius:9999,padding:'6px 14px',marginBottom:28,letterSpacing:'0.07em',textTransform:'uppercase'}}>
             🍁 Built for Canadians &nbsp;·&nbsp; FINTRAC and CSA Compliant
@@ -137,13 +137,13 @@ export default function Home() {
           <a href="/exchanges" style={{color:C.emerald,fontSize:14,fontWeight:600,textDecoration:'none',whiteSpace:'nowrap',flexShrink:0}}>Full comparison →</a>
         </div>
 
-        <div style={{background:'linear-gradient(135deg,#0c2a1a 0%,#091e2d 60%,#0b1220 100%)',border:'1px solid rgba(16,185,129,0.4)',borderRadius:24,padding:'40px 44px',marginBottom:24,position:'relative',overflow:'hidden'}}>
+        <div style={{background:'linear-gradient(135deg,#0c2a1a 0%,#091e2d 60%,#0b1220 100%)',border:'1.5px solid rgba(16,185,129,0.5)',borderRadius:24,padding:'40px 44px',marginBottom:24,position:'relative',overflow:'hidden'}}>
           <div style={{position:'absolute',top:0,right:0,width:500,height:300,background:'radial-gradient(ellipse at 90% 10%,rgba(16,185,129,0.1) 0%,transparent 65%)',pointerEvents:'none'}}/>
           <div style={{position:'absolute',top:18,right:24,background:C.emerald,color:'#fff',fontSize:11,fontWeight:800,padding:'5px 14px',borderRadius:9999,letterSpacing:'0.05em'}}>★ TOP PICK — EDITOR'S CHOICE</div>
           <div style={{display:'grid',gridTemplateColumns:'1fr 280px 200px',gap:44,alignItems:'start',position:'relative'}}>
             <div>
               <div style={{fontSize:11,color:C.emerald,fontWeight:700,letterSpacing:'0.08em',textTransform:'uppercase',marginBottom:10}}>#1 Recommended for Canadian Beginners</div>
-              <div style={{fontSize:'2.4rem',fontWeight:800,letterSpacing:'-0.03em',color:C.white,marginBottom:6,lineHeight:1}}>Bitbuy</div>
+              <div style={{fontSize:'2.8rem',fontWeight:800,letterSpacing:'-0.03em',color:C.white,marginBottom:6,lineHeight:1}}>Bitbuy</div>
               <div style={{color:'#f59e0b',fontSize:15,marginBottom:14}}>★★★★★ <span style={{color:C.muted,fontSize:13,fontWeight:400}}>4.8 / 5 · 200,000+ Canadians</span></div>
               <p style={{fontSize:14,color:C.muted,lineHeight:1.8,margin:'0 0 20px',maxWidth:360}}>Canada's most trusted regulated exchange. Free Interac e-Transfer deposits, cold storage insurance, and an interface built for first-time buyers. FINTRAC registered since 2016.</p>
               <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>
@@ -162,7 +162,7 @@ export default function Home() {
             </div>
             <div style={{display:'flex',flexDirection:'column',gap:14}}>
               <a href="#" style={{background:C.emerald,color:'#fff',borderRadius:12,padding:'16px 20px',fontWeight:700,fontSize:15,textAlign:'center',textDecoration:'none',display:'block'}}
-                onMouseEnter={e=>(e.currentTarget.style.opacity='0.88')} onMouseLeave={e=>(e.currentTarget.style.opacity='1')}>Sign up with Bitbuy →</a>
+                onMouseEnter={e=>(e.currentTarget.style.opacity='0.88')} onMouseLeave={e=>(e.currentTarget.style.opacity='1')}>Open a Free Bitbuy Account →</a>
               <div style={{fontSize:11,color:C.dim,textAlign:'center',lineHeight:1.5}}>Affiliate link — no extra cost to you</div>
               <div style={{borderTop:'1px solid rgba(255,255,255,0.08)',paddingTop:14,display:'flex',flexDirection:'column',gap:6}}>
                 {['Canadian-owned since 2016','Free CAD deposits via Interac','Insured cold storage custody','Clean beginner dashboard'].map(p=>(
@@ -202,7 +202,7 @@ export default function Home() {
               <a href={e.url} target="_blank" rel="noopener noreferrer"
                 style={{display:'block',background:C.emerald,color:'#fff',borderRadius:10,padding:'13px 0',fontWeight:700,fontSize:13,textAlign:'center',textDecoration:'none',transition:'opacity 0.15s'}}
                 onMouseEnter={e2=>(e2.currentTarget.style.opacity='0.85')} onMouseLeave={e2=>(e2.currentTarget.style.opacity='1')}
-              >Sign up with referral →</a>
+              >Get Started Free →</a>
               <div style={{fontSize:11,color:C.dim,textAlign:'center',marginTop:6}}>Affiliate link — no extra cost to you</div>
             </div>
           ))}
@@ -238,7 +238,7 @@ export default function Home() {
               <a href={e.url} target="_blank" rel="noopener noreferrer"
                 style={{display:'block',background:C.emerald,color:'#fff',borderRadius:10,padding:'13px 20px',fontWeight:700,fontSize:13,textAlign:'center',textDecoration:'none',transition:'opacity 0.15s'}}
                 onMouseEnter={e2=>(e2.currentTarget.style.opacity='0.85')} onMouseLeave={e2=>(e2.currentTarget.style.opacity='1')}
-              >Sign up with referral →</a>
+              >Get Started Free →</a>
               <div style={{fontSize:11,color:C.dim,textAlign:'center'}}>Affiliate link — no extra cost to you</div>
             </div>
           </div>

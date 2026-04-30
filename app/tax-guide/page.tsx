@@ -9,17 +9,13 @@ const C = {
 }
 
 const Logo = () => (
-  <div style={{width:36,height:36,background:'#0d1f35',borderRadius:9,border:'1.5px solid #10b981',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0}}>
-    <svg viewBox="0 0 48 48" style={{width:22,height:22}}>
-      <path d="M24 5 L26.5 20 L24 18 L21.5 20 Z" fill="#10b981"/>
-      <path d="M24 43 L26.5 28 L24 30 L21.5 28 Z" fill="#10b981"/>
-      <path d="M5 24 L20 26.5 L18 24 L20 21.5 Z" fill="#10b981"/>
-      <path d="M43 24 L28 21.5 L30 24 L28 26.5 Z" fill="#10b981"/>
-      <path d="M9 9 L20 20 L18 20 L20 18 Z" fill="rgba(16,185,129,0.5)"/>
-      <path d="M39 9 L28 20 L30 20 L28 18 Z" fill="rgba(16,185,129,0.5)"/>
-      <path d="M9 39 L20 28 L20 30 L18 28 Z" fill="rgba(16,185,129,0.5)"/>
-      <path d="M39 39 L28 28 L30 28 L28 30 Z" fill="rgba(16,185,129,0.5)"/>
-      <circle cx="24" cy="24" r="3" fill="#10b981"/>
+  <div style={{width:40,height:40,background:'#0d1f35',borderRadius:10,border:'1.5px solid #10b981',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0}}>
+    <svg viewBox="0 0 40 40" style={{width:26,height:26}}>
+      <path d="M20 3 L23 17 L20 14 L17 17 Z" fill="#10b981"/>
+      <path d="M20 37 L23 23 L20 26 L17 23 Z" fill="#10b981"/>
+      <path d="M3 20 L17 23 L14 20 L17 17 Z" fill="#10b981"/>
+      <path d="M37 20 L23 17 L26 20 L23 23 Z" fill="#10b981"/>
+      <circle cx="20" cy="20" r="3.5" fill="#10b981"/>
     </svg>
   </div>
 )

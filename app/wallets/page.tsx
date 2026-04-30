@@ -22,7 +22,7 @@ export default function WalletsPage() {
       <nav style={{position:'sticky',top:0,zIndex:100,background:'rgba(11,18,32,0.95)',backdropFilter:'blur(16px)',borderBottom:'1px solid '+C.border}}>
         <div style={{maxWidth:1200,margin:'0 auto',padding:'0 32px',display:'flex',alignItems:'center',justifyContent:'space-between',height:68,gap:24}}>
           <a href="/" style={{display:'flex',alignItems:'center',gap:10,fontWeight:700,fontSize:18,color:C.white,textDecoration:'none',flexShrink:0}}>
-            <div style={{width:36,height:36,background:C.emerald,borderRadius:8,display:'flex',alignItems:'center',justifyContent:'center'}}><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style={{width:22,height:22}}><path fill="white" d="M50 5 L58 30 L85 20 L70 42 L95 45 L75 58 L80 80 L50 68 L20 80 L25 58 L5 45 L30 42 L15 20 L42 30 Z"/></svg></div>
+            <div style={{width:40,height:40,background:'#0d1f35',borderRadius:10,border:'1.5px solid #10b981',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0}}><svg viewBox="0 0 40 40" style={{width:26,height:26}}><path d="M20 3 L23 17 L20 14 L17 17 Z" fill="#10b981"/><path d="M20 37 L23 23 L20 26 L17 23 Z" fill="#10b981"/><path d="M3 20 L17 23 L14 20 L17 17 Z" fill="#10b981"/><path d="M37 20 L23 17 L26 20 L23 23 Z" fill="#10b981"/><circle cx="20" cy="20" r="3.5" fill="#10b981"/></svg></div>
             CryptoNorth
           </a>
           <div style={{display:'flex'}}>
@@ -137,7 +137,7 @@ export default function WalletsPage() {
       </div>
       <footer style={{background:'#070e1a',borderTop:'1px solid '+C.border,padding:'44px 32px'}}>
         <div style={{maxWidth:1200,margin:'0 auto',display:'flex',justifyContent:'space-between',alignItems:'center',flexWrap:'wrap',gap:20}}>
-          <div><div style={{fontWeight:700,fontSize:16,display:'flex',alignItems:'center',gap:8}}><div style={{width:20,height:20,background:C.emerald,borderRadius:4,display:'flex',alignItems:'center',justifyContent:'center'}}><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style={{width:12,height:12}}><path fill="white" d="M50 5 L58 30 L85 20 L70 42 L95 45 L75 58 L80 80 L50 68 L20 80 L25 58 L5 45 L30 42 L15 20 L42 30 Z"/></svg></div>CryptoNorth</div><div style={{fontSize:12,color:C.dim,marginTop:3}}>Canada's independent crypto resource</div></div>
+          <div><div style={{fontWeight:700,fontSize:16,display:'flex',alignItems:'center',gap:8}}><div style={{width:40,height:40,background:'#0d1f35',borderRadius:10,border:'1.5px solid #10b981',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0}}><svg viewBox="0 0 40 40" style={{width:26,height:26}}><path d="M20 3 L23 17 L20 14 L17 17 Z" fill="#10b981"/><path d="M20 37 L23 23 L20 26 L17 23 Z" fill="#10b981"/><path d="M3 20 L17 23 L14 20 L17 17 Z" fill="#10b981"/><path d="M37 20 L23 17 L26 20 L23 23 Z" fill="#10b981"/><circle cx="20" cy="20" r="3.5" fill="#10b981"/></svg></div>CryptoNorth</div><div style={{fontSize:12,color:C.dim,marginTop:3}}>Canada's independent crypto resource</div></div>
           <div style={{display:'flex',gap:24,flexWrap:'wrap'}}>{[['/','Home'],['/exchanges','Exchanges'],['/tax-guide','Tax Guide'],['/wallets','Wallets'],['/beginners-guide',"Beginner's Guide"]].map(([h,l])=><a key={l} href={h} style={{fontSize:13,color:C.dim,textDecoration:'none'}}>{l}</a>)}</div>
           <div style={{fontSize:11,color:'#2a3a52',width:'100%',marginTop:8}}>© 2026 CryptoNorth. Not financial advice. Crypto is not CDIC insured.</div>
         </div>

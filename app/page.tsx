@@ -10,8 +10,18 @@ const C = {
 }
 
 const Logo = () => (
-  <div style={{width:36,height:36,background:C.emerald,borderRadius:9,display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0}}>
-    <svg viewBox="0 0 100 100" style={{width:20,height:20}}><path fill="white" d="M50 4 L60 32 L88 18 L72 44 L96 48 L74 62 L80 84 L50 70 L20 84 L26 62 L4 48 L28 44 L12 18 L40 32 Z"/></svg>
+  <div style={{width:36,height:36,background:'#0d1f35',borderRadius:9,border:'1.5px solid #10b981',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0}}>
+    <svg viewBox="0 0 48 48" style={{width:22,height:22}}>
+      <path d="M24 5 L26.5 20 L24 18 L21.5 20 Z" fill="#10b981"/>
+      <path d="M24 43 L26.5 28 L24 30 L21.5 28 Z" fill="#10b981"/>
+      <path d="M5 24 L20 26.5 L18 24 L20 21.5 Z" fill="#10b981"/>
+      <path d="M43 24 L28 21.5 L30 24 L28 26.5 Z" fill="#10b981"/>
+      <path d="M9 9 L20 20 L18 20 L20 18 Z" fill="rgba(16,185,129,0.5)"/>
+      <path d="M39 9 L28 20 L30 20 L28 18 Z" fill="rgba(16,185,129,0.5)"/>
+      <path d="M9 39 L20 28 L20 30 L18 28 Z" fill="rgba(16,185,129,0.5)"/>
+      <path d="M39 39 L28 28 L30 28 L28 30 Z" fill="rgba(16,185,129,0.5)"/>
+      <circle cx="24" cy="24" r="3" fill="#10b981"/>
+    </svg>
   </div>
 )
 
@@ -49,7 +59,7 @@ export default function Home() {
       <nav style={{position:'sticky',top:0,zIndex:100,background:'rgba(11,18,32,0.97)',backdropFilter:'blur(20px)',borderBottom:'1px solid '+C.border}}>
         <div style={{maxWidth:1200,margin:'0 auto',padding:'0 32px',display:'flex',alignItems:'center',justifyContent:'space-between',height:68,gap:32}}>
           <a href="/" style={{display:'flex',alignItems:'center',gap:10,fontWeight:800,fontSize:18,letterSpacing:'-0.03em',color:C.white,textDecoration:'none',flexShrink:0}}>
-            <Logo/>Crypto<span style={{color:C.emerald}}>North</span>
+            <Logo/>CryptoNorth
           </a>
           <div style={{display:'flex'}}>
             {navLinks.map(([h,l])=>(
@@ -282,7 +292,7 @@ export default function Home() {
       <footer style={{background:'#070d1a',borderTop:'1px solid '+C.border,padding:'48px 32px 40px'}}>
         <div style={{maxWidth:1200,margin:'0 auto'}}>
           <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',flexWrap:'wrap',gap:24,marginBottom:32}}>
-            <a href="/" style={{display:'flex',alignItems:'center',gap:10,fontWeight:800,fontSize:17,letterSpacing:'-0.03em',color:C.white,textDecoration:'none'}}><Logo/>Crypto<span style={{color:C.emerald}}>North</span></a>
+            <a href="/" style={{display:'flex',alignItems:'center',gap:10,fontWeight:800,fontSize:17,letterSpacing:'-0.03em',color:C.white,textDecoration:'none'}}><Logo/>CryptoNorth</a>
             <div style={{display:'flex',gap:28,flexWrap:'wrap'}}>
               {navLinks.map(([h,l])=>(
                 <a key={l} href={h} style={{fontSize:13,color:C.muted,textDecoration:'none',fontWeight:500}}

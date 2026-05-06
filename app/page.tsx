@@ -24,7 +24,7 @@ const Logo = () => (
 const navLinks = [['/', 'Home'],['/exchanges','Exchanges'],['/tax-guide','Tax Guide'],['/wallets','Wallets'],['/beginners-guide',"Beginner's Guide"]]
 
 const others = [
-  {name:'Newton',fee:'0.25–0.60%',coins:'70+',bestFor:'Intermediate',rating:4.4,stars:'★★★★☆',pros:['FINTRAC + CSA registered','70+ coins with CAD pairs','Free Interac e-Transfer','No deposit or withdrawal fees'],cons:['No staking rewards','Spread widens on large orders'],province:null,url:'#'},
+  {name:'Newton',fee:'0.25–0.60%',coins:'70+',bestFor:'Intermediate',rating:4.4,stars:'★★★★☆',pros:['FINTRAC + CSA registered','70+ coins with CAD pairs','Free Interac e-Transfer','No deposit or withdrawal fees'],cons:['No staking rewards','Spread widens on large orders'],province:null,url:'https://web.newton.co/r/XH1RIR'},
   {name:'NDAX',fee:'0.20% flat',coins:'50+',bestFor:'Low-fee traders',rating:4.1,stars:'★★★★☆',pros:['Flat 0.20% trading fee','Staking available','Advanced order types','FINTRAC + CSA registered'],cons:['Less beginner-friendly UI','Lower liquidity on some pairs'],province:null,url:'#'},
   {name:'Shakepay',fee:'0% + spread',coins:'BTC, ETH',bestFor:'Bitcoin beginners',rating:4.3,stars:'★★★★☆',pros:['Zero explicit fees','Shakesats Bitcoin cashback','Instant Interac e-Transfer','Simplest app in Canada'],cons:['BTC and ETH only','Spread cost hidden in price'],province:null,url:'#'},
   {name:'Wealthsimple',fee:'1.5–2.0%',coins:'50+',bestFor:'Existing WS users',rating:4.2,stars:'★★★★☆',pros:['Trusted Canadian brand','Integrated with WS stocks and ETFs','ETH and SOL staking'],cons:['Highest fees (1.5–2%)','No advanced trading tools'],province:null,url:'#'},

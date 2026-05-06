@@ -3,8 +3,21 @@
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'CryptoNorth — Crypto, simplified for Canadians',
-  description: 'Unbiased reviews of Canadian crypto exchanges, CRA tax guides, and live CAD prices. No U.S. bias. No fluff.',
+  title: {
+    default: 'Best Canadian Crypto Exchanges 2026 | CryptoNorth',
+    template: '%s | CryptoNorth',
+  },
+  description: 'Compare the best FINTRAC-registered crypto exchanges in Canada. Honest fees, real pros and cons, live CAD prices, and CRA tax guidance. No U.S. bias.',
+  metadataBase: new URL('https://www.cryptonorth.ca'),
+  openGraph: {
+    siteName: 'CryptoNorth',
+    locale: 'en_CA',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

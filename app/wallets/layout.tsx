@@ -1,10 +1,10 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Best Crypto Wallets for Canadians 2026 | CryptoNorth",
+  title: "Best Crypto Wallets for Canadians 2026",
   description: "Compare hardware and software crypto wallets available in Canada. Ledger, Trezor, MetaMask and more with security tips and Canadian tax implications.",
   openGraph: {
-    title: "Best Crypto Wallets for Canadians 2026 | CryptoNorth",
+    title: "Best Crypto Wallets for Canadians 2026",
     description: "Compare hardware and software crypto wallets available in Canada. Ledger, Trezor, MetaMask and more with security tips and Canadian tax implications.",
     url: "https://www.cryptonorth.ca/wallets",
     siteName: "CryptoNorth",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Best Crypto Wallets for Canadians 2026 | CryptoNorth",
+    title: "Best Crypto Wallets for Canadians 2026",
     description: "Compare hardware and software crypto wallets available in Canada. Ledger, Trezor, MetaMask and more with security tips and Canadian tax implications.",
   },
   alternates: {

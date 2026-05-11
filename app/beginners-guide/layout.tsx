@@ -1,10 +1,10 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "How to Buy Crypto in Canada 2026 - Beginners Guide | CryptoNorth",
+  title: "How to Buy Crypto in Canada 2026 - Beginners Guide",
   description: "Step-by-step guide to buying cryptocurrency in Canada. FINTRAC-registered exchanges, Interac e-Transfer deposits, and CRA tax obligations explained simply.",
   openGraph: {
-    title: "How to Buy Crypto in Canada 2026 - Beginners Guide | CryptoNorth",
+    title: "How to Buy Crypto in Canada 2026 - Beginners Guide",
     description: "Step-by-step guide to buying cryptocurrency in Canada. FINTRAC-registered exchanges, Interac e-Transfer deposits, and CRA tax obligations explained simply.",
     url: "https://www.cryptonorth.ca/beginners-guide",
     siteName: "CryptoNorth",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "How to Buy Crypto in Canada 2026 - Beginners Guide | CryptoNorth",
+    title: "How to Buy Crypto in Canada 2026 - Beginners Guide",
     description: "Step-by-step guide to buying cryptocurrency in Canada. FINTRAC-registered exchanges, Interac e-Transfer deposits, and CRA tax obligations explained simply.",
   },
   alternates: {

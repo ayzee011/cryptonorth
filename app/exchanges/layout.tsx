@@ -1,10 +1,10 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Best Canadian Crypto Exchanges Compared 2026 | CryptoNorth",
+  title: "Best Canadian Crypto Exchanges Compared 2026",
   description: "Side-by-side comparison of Canada's top FINTRAC and CSA-registered crypto exchanges. Compare Bitbuy, Newton, NDAX, Shakepay, Wealthsimple and Kraken.",
   openGraph: {
-    title: "Best Canadian Crypto Exchanges Compared 2026 | CryptoNorth",
+    title: "Best Canadian Crypto Exchanges Compared 2026",
     description: "Side-by-side comparison of Canada's top FINTRAC and CSA-registered crypto exchanges. Compare Bitbuy, Newton, NDAX, Shakepay, Wealthsimple and Kraken.",
     url: "https://www.cryptonorth.ca/exchanges",
     siteName: "CryptoNorth",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Best Canadian Crypto Exchanges Compared 2026 | CryptoNorth",
+    title: "Best Canadian Crypto Exchanges Compared 2026",
     description: "Side-by-side comparison of Canada's top FINTRAC and CSA-registered crypto exchanges. Compare Bitbuy, Newton, NDAX, Shakepay, Wealthsimple and Kraken.",
   },
   alternates: {

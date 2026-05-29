@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Canadian Crypto Tax Guide 2026 - CRA Rules and Rates",
     description: "Everything Canadians need to report crypto to the CRA. 50% inclusion rate, ACB method, T1 deadline April 30 2026, CARF rules and tax software picks.",
-    url: "https://www.cryptonorth.ca/tax-guide",
+    url: "https://cryptonorth.ca/tax-guide",
     siteName: "CryptoNorth",
     locale: "en_CA",
     type: "website",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: "Everything Canadians need to report crypto to the CRA. 50% inclusion rate, ACB method, T1 deadline April 30 2026, CARF rules and tax software picks.",
   },
   alternates: {
-    canonical: "https://www.cryptonorth.ca/tax-guide",
+    canonical: "https://cryptonorth.ca/tax-guide",
   },
 }
 

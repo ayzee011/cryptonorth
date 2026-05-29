@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "How to Buy Crypto in Canada 2026 - Beginners Guide",
     description: "Step-by-step guide to buying cryptocurrency in Canada. FINTRAC-registered exchanges, Interac e-Transfer deposits, and CRA tax obligations explained simply.",
-    url: "https://www.cryptonorth.ca/beginners-guide",
+    url: "https://cryptonorth.ca/beginners-guide",
     siteName: "CryptoNorth",
     locale: "en_CA",
     type: "website",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: "Step-by-step guide to buying cryptocurrency in Canada. FINTRAC-registered exchanges, Interac e-Transfer deposits, and CRA tax obligations explained simply.",
   },
   alternates: {
-    canonical: "https://www.cryptonorth.ca/beginners-guide",
+    canonical: "https://cryptonorth.ca/beginners-guide",
   },
 }
 

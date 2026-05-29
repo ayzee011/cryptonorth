@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Best Canadian Crypto Exchanges Compared 2026",
     description: "Side-by-side comparison of Canada's top FINTRAC and CSA-registered crypto exchanges. Compare Bitbuy, Newton, NDAX, Shakepay, Wealthsimple and Kraken.",
-    url: "https://www.cryptonorth.ca/exchanges",
+    url: "https://cryptonorth.ca/exchanges",
     siteName: "CryptoNorth",
     locale: "en_CA",
     type: "website",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: "Side-by-side comparison of Canada's top FINTRAC and CSA-registered crypto exchanges. Compare Bitbuy, Newton, NDAX, Shakepay, Wealthsimple and Kraken.",
   },
   alternates: {
-    canonical: "https://www.cryptonorth.ca/exchanges",
+    canonical: "https://cryptonorth.ca/exchanges",
   },
 }
 

@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://cryptonorth.ca'
+  const baseUrl = 'https://www.cryptonorth.ca'
   const lastModified = new Date('2026-04-30')
 
   return [

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     template: '%s | CryptoNorth',
   },
   description: 'Compare the best FINTRAC-registered crypto exchanges in Canada. Honest fees, real pros and cons, live CAD prices, and CRA tax guidance. No U.S. bias.',
-  metadataBase: new URL('https://cryptonorth.ca'),
+  metadataBase: new URL('https://www.cryptonorth.ca'),
   openGraph: {
     siteName: 'CryptoNorth',
     locale: 'en_CA',

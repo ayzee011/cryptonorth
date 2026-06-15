@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Best Crypto Wallets for Canadians 2026",
     description: "Compare hardware and software crypto wallets available in Canada. Ledger, Trezor, MetaMask and more with security tips and Canadian tax implications.",
-    url: "https://cryptonorth.ca/wallets",
+    url: "https://www.cryptonorth.ca/wallets",
     siteName: "CryptoNorth",
     locale: "en_CA",
     type: "website",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: "Compare hardware and software crypto wallets available in Canada. Ledger, Trezor, MetaMask and more with security tips and Canadian tax implications.",
   },
   alternates: {
-    canonical: "https://cryptonorth.ca/wallets",
+    canonical: "https://www.cryptonorth.ca/wallets",
   },
 }
 

@@ -26,9 +26,9 @@ const navLinks = [['/', 'Home'],['/exchanges','Exchanges'],['/tax-guide','Tax Gu
 const others = [
   {name:'Newton',fee:'0.25–0.60%',coins:'70+',bestFor:'Intermediate',rating:4.4,stars:'★★★★☆',pros:['FINTRAC + CSA registered','70+ coins with CAD pairs','Free Interac e-Transfer','No deposit or withdrawal fees'],cons:['No staking rewards','Spread widens on large orders'],province:null,url:'https://web.newton.co/r/XH1RIR'},
   {name:'NDAX',fee:'0.20% flat',coins:'50+',bestFor:'Low-fee traders',rating:4.1,stars:'★★★★☆',pros:['Flat 0.20% trading fee','Staking available','Advanced order types','FINTRAC + CSA registered'],cons:['Less beginner-friendly UI','Lower liquidity on some pairs'],province:null,url:'https://ref.ndax.io/NLZU/rztuxovh'},
-  {name:'Shakepay',fee:'0% + spread',coins:'BTC, ETH',bestFor:'Bitcoin beginners',rating:4.3,stars:'★★★★☆',pros:['Zero explicit fees','Shakesats Bitcoin cashback','Instant Interac e-Transfer','Simplest app in Canada'],cons:['BTC and ETH only','Spread cost hidden in price'],province:null,url:'#'},
-  {name:'Wealthsimple',fee:'1.5–2.0%',coins:'50+',bestFor:'Existing WS users',rating:4.2,stars:'★★★★☆',pros:['Trusted Canadian brand','Integrated with WS stocks and ETFs','ETH and SOL staking'],cons:['Highest fees (1.5–2%)','No advanced trading tools'],province:null,url:'#'},
-  {name:'Kraken',fee:'0.16–0.26%',coins:'400+',bestFor:'Advanced traders',rating:4.7,stars:'★★★★★',pros:['Lowest fees listed','400+ coins available','Futures and margin trading','Excellent security record'],cons:['AB, BC, MB, SK only — not Ontario or Quebec','No Interac e-Transfer'],province:'AB · BC · MB · SK only',url:'#'},
+  {name:'Shakepay',fee:'0% + spread',coins:'BTC, ETH',bestFor:'Bitcoin beginners',rating:4.3,stars:'★★★★☆',pros:['Zero explicit fees','Shakesats Bitcoin cashback','Instant Interac e-Transfer','Simplest app in Canada'],cons:['BTC and ETH only','Spread cost hidden in price'],province:null,url:'https://shakepay.com'},
+  {name:'Wealthsimple',fee:'1.5–2.0%',coins:'50+',bestFor:'Existing WS users',rating:4.2,stars:'★★★★☆',pros:['Trusted Canadian brand','Integrated with WS stocks and ETFs','ETH and SOL staking'],cons:['Highest fees (1.5–2%)','No advanced trading tools'],province:null,url:'https://www.wealthsimple.com/en-ca/crypto'},
+  {name:'Kraken',fee:'0.16–0.26%',coins:'400+',bestFor:'Advanced traders',rating:4.7,stars:'★★★★★',pros:['Lowest fees listed','400+ coins available','Futures and margin trading','Excellent security record'],cons:['AB, BC, MB, SK only — not Ontario or Quebec','No Interac e-Transfer'],province:'AB · BC · MB · SK only',url:'https://www.kraken.com'},
 ]
 
 function fmt(n: number) {
@@ -40,7 +40,9 @@ export default function Home() {
   useEffect(() => {
     function load() {
       fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=cad&include_24hr_change=true')
-        .then(r => r.json()).then(setPrices).catch(()=>{})
+        .then(r => r.ok ? r.json() : Promise.reject())
+        .then(d => { if (d && d.bitcoin) setPrices(d) })
+        .catch(()=>setPrices((p:any)=>p.bitcoin?p:{unavailable:true}))
     }
     load()
     const t = setInterval(load, 30000)
@@ -107,7 +109,7 @@ export default function Home() {
                 </div>
               </div>
               <div style={{textAlign:'right'}}>
-                <div style={{fontSize:21,fontWeight:800,letterSpacing:'-0.02em',fontFamily:'monospace',color:C.white}}>{coin.data?.cad ? fmt(coin.data.cad) : <span style={{color:C.dim,fontSize:14}}>Loading…</span>}</div>
+                <div style={{fontSize:21,fontWeight:800,letterSpacing:'-0.02em',fontFamily:'monospace',color:C.white}}>{coin.data?.cad ? fmt(coin.data.cad) : <span style={{color:C.dim,fontSize:14}}>{prices.unavailable ? '—' : 'Loading…'}</span>}</div>
                 {coin.data?.cad_24h_change!=null&&<div style={{fontSize:13,fontWeight:700,marginTop:3,color:coin.data.cad_24h_change>=0?C.emerald:'#f87171'}}>{coin.data.cad_24h_change>=0?'▲ +':'▼ '}{Math.abs(coin.data.cad_24h_change).toFixed(2)}%</div>}
               </div>
             </div>
@@ -167,7 +169,7 @@ export default function Home() {
               ))}
             </div>
             <div style={{display:'flex',flexDirection:'column',gap:14}}>
-              <a href="#" style={{background:C.emerald,color:'#fff',borderRadius:12,padding:'16px 20px',fontWeight:700,fontSize:15,textAlign:'center',textDecoration:'none',display:'block'}}
+              <a href="https://bitbuy.ca" target="_blank" rel="noopener sponsored" style={{background:C.emerald,color:'#fff',borderRadius:12,padding:'16px 20px',fontWeight:700,fontSize:15,textAlign:'center',textDecoration:'none',display:'block'}}
                 onMouseEnter={e=>(e.currentTarget.style.opacity='0.88')} onMouseLeave={e=>(e.currentTarget.style.opacity='1')}>Open a Free Bitbuy Account →</a>
               <div style={{fontSize:11,color:C.dim,textAlign:'center',lineHeight:1.5}}>Affiliate link — no extra cost to you</div>
               <div style={{borderTop:'1px solid rgba(255,255,255,0.08)',paddingTop:14,display:'flex',flexDirection:'column',gap:6}}>

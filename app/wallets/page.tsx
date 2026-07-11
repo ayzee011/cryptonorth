@@ -3,10 +3,11 @@
 const C = {bg:'#0b1220',surface:'#172033',surface2:'#1e2a3f',border:'rgba(255,255,255,0.07)',emerald:'#10b981',emeraldDim:'rgba(16,185,129,0.12)',emeraldBorder:'rgba(16,185,129,0.28)',white:'#f0f6ff',muted:'#8899b4',dim:'#4e6280',font:"'Inter', system-ui, sans-serif"}
 
 const hw = [
-  {name:'Ledger Nano X',price:'~CAD $200',coins:'5,500+',bt:true,bestFor:'Most Canadians',pros:['5,500+ coins supported','Bluetooth mobile app (Ledger Live)','Industry-leading CC EAL5+ security chip','Widely available in Canada'],cons:['Pricier than entry-level options','2023 data breach exposed some customer emails (no funds lost)'],featured:true},
-  {name:'Ledger Nano S Plus',price:'~CAD $100',coins:'5,500+',bt:false,bestFor:'Budget-conscious Canadians',pros:['Same security chip as Nano X','5,500+ coins','USB-C connection','More affordable'],cons:['No Bluetooth - USB only','Smaller screen than Nano X'],featured:false},
-  {name:'Trezor Model T',price:'~CAD $280',coins:'1,800+',bt:false,bestFor:'Open-source advocates',pros:['Fully open-source firmware','Touchscreen interface','Fully auditable - no closed-source chip','Strong privacy reputation'],cons:['Fewer coins than Ledger','No Bluetooth','Higher price for fewer features'],featured:false},
-  {name:'Coldcard Mk4',price:'~CAD $220',coins:'Bitcoin only',bt:false,bestFor:'Bitcoin maximalists',pros:['Bitcoin-only laser-focused security','Air-gapped signing','No USB required for signing','Beloved by Bitcoin security community'],cons:['Bitcoin only - no altcoins','Steep learning curve','No companion app for altcoins'],featured:false},
+  {name:'Ledger Nano X',price:'~CAD $200',coins:'5,500+',bt:true,bestFor:'Most Canadians',pros:['5,500+ coins supported','Bluetooth mobile app (Ledger Live)','Industry-leading CC EAL5+ security chip','Widely available in Canada'],cons:['Pricier than entry-level options','Company data leaks (2020, 2026) exposed customer contact info - device security and funds unaffected'],featured:true,url:'https://www.ledger.com'},
+  {name:'Ledger Nano S Plus',price:'~CAD $100',coins:'5,500+',bt:false,bestFor:'Budget-conscious Canadians',pros:['Same security chip as Nano X','5,500+ coins','USB-C connection','More affordable'],cons:['No Bluetooth - USB only','Smaller screen than Nano X'],featured:false,url:'https://www.ledger.com'},
+  {name:'Trezor Safe 5',price:'~CAD $230',coins:'8,000+',bt:false,bestFor:'Open-source advocates',pros:['Fully open-source firmware','Color touchscreen with haptic feedback','EAL6+ Secure Element chip','Shamir Backup support'],cons:['No Bluetooth','Fewer natively supported chains than Ledger'],featured:false,url:'https://trezor.io'},
+  {name:'Trezor Safe 3',price:'~CAD $110',coins:'8,000+',bt:false,bestFor:'Best-value cold storage',pros:['Same EAL6+ Secure Element as Safe 5','Fully open-source firmware','USB-C connection','Most affordable modern Trezor'],cons:['No touchscreen - two-button navigation','Small monochrome screen'],featured:false,url:'https://trezor.io'},
+  {name:'Coldcard Mk4',price:'~CAD $220',coins:'Bitcoin only',bt:false,bestFor:'Bitcoin maximalists',pros:['Bitcoin-only laser-focused security','Air-gapped signing','No USB required for signing','Beloved by Bitcoin security community'],cons:['Bitcoin only - no altcoins','Steep learning curve','No companion app for altcoins'],featured:false,url:'https://coldcard.com'},
 ]
 
 const sw = [
@@ -85,6 +86,10 @@ export default function WalletsPage() {
                     {w.cons.map(c=><div key={c} style={{fontSize:12,color:'#ef4444',marginBottom:3}}>- {c}</div>)}
                   </div>
                 </div>
+                <div style={{marginTop:18,display:'flex',alignItems:'center',gap:14,flexWrap:'wrap'}}>
+                  <a href={w.url} target="_blank" rel="noopener sponsored" style={{background:w.featured?C.emerald:C.surface,color:w.featured?'#fff':C.emerald,border:'1px solid '+(w.featured?C.emerald:C.emeraldBorder),borderRadius:10,padding:'10px 18px',fontWeight:700,fontSize:13,textDecoration:'none',display:'inline-block'}}>Buy direct from manufacturer →</a>
+                  <span style={{fontSize:11,color:C.dim}}>Never buy hardware wallets from resellers</span>
+                </div>
               </div>
             ))}
           </div>
@@ -132,7 +137,7 @@ export default function WalletsPage() {
         </section>
         <div style={{background:C.surface,border:'1px solid '+C.border,borderRadius:14,padding:24}}>
           <div style={{fontWeight:600,fontSize:15,color:C.white,marginBottom:10}}>Canadian Tax Note on Wallets</div>
-          <p style={{fontSize:13,color:C.muted,lineHeight:1.7,margin:'0 0 10px'}}>Transferring crypto between wallets <strong style={{color:C.white}}>you own</strong> is generally not taxable - keep records of wallet addresses to prove ownership. Swapping tokens within a wallet (e.g. BTC to ETH via Exodus) <strong style={{color:C.white}}>is a taxable event</strong> under CRA rules. See our <a href="/tax-guide" style={{color:C.emerald}}>Tax Guide</a> for details.</p>
+          <p style={{fontSize:13,color:C.muted,lineHeight:1.7,margin:'0 0 10px'}}>Transferring crypto between wallets <strong style={{color:C.white}}>you own</strong> is generally not taxable - keep records of wallet addresses to prove ownership. Swapping tokens within a wallet (e.g. BTC to ETH via Exodus) <strong style={{color:C.white}}>is a taxable event</strong> under CRA rules. See our <a href="/tax-guide" style={{color:C.emerald}}>Tax Guide</a> for details. Tools like <a href="https://coinledger.io" target="_blank" rel="noopener sponsored" style={{color:C.emerald}}>CoinLedger</a> can track your adjusted cost base automatically across wallets.</p>
         </div>
       </div>
       <footer style={{background:'#070e1a',borderTop:'1px solid '+C.border,padding:'44px 32px'}}>

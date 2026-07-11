@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 
-const C = {bg:'#0b1220',surface:'#172033',surface2:'#1e2a3f',border:'rgba(255,255,255,0.07)',emerald:'#10b981',emeraldDim:'rgba(16,185,129,0.12)',emeraldBorder:'rgba(16,185,129,0.28)',white:'#f0f6ff',muted:'#8899b4',dim:'#4e6280',font:"'Inter', system-ui, sans-serif"}
+const C = {bg:'#0b1220',surface:'#172033',surface2:'#1e2a3f',border:'rgba(255,255,255,0.07)',emerald:'#10b981',emeraldDim:'rgba(16,185,129,0.12)',emeraldBorder:'rgba(16,185,129,0.28)',white:'#f0f6ff',muted:'#8899b4',dim:'#8296b5',font:"'Inter', system-ui, sans-serif"}
 
 const exchanges = [
   {name:'Bitbuy',founded:2016,hq:'Toronto, ON',fee:'0.20%',makerFee:'0.10%',takerFee:'0.20%',coins:40,interac:true,staking:false,rating:4.8,bestFor:'Canadian beginners',provinces:'All provinces',pros:['FINTRAC + CSA registered','Free Interac e-Transfer deposits','Beginner-friendly UI','Cold storage insurance'],cons:['Only 40+ coins','No staking'],url:'https://bitbuy.ca',featured:true},
@@ -31,7 +31,7 @@ export default function ExchangesPage() {
               <a key={l} href={h} style={{color:h==='/exchanges'?C.white:C.muted,fontSize:14,fontWeight:h==='/exchanges'?600:500,padding:'0 14px',height:68,display:'flex',alignItems:'center',whiteSpace:'nowrap',textDecoration:'none'}}>{l}</a>
             ))}
           </div>
-          <a href="/beginners-guide" style={{background:C.emerald,color:'#fff',padding:'0 22px',height:40,borderRadius:9999,fontWeight:600,fontSize:14,display:'flex',alignItems:'center',whiteSpace:'nowrap',flexShrink:0,textDecoration:'none'}}>Beginner's Guide</a>
+          <a href="/beginners-guide" style={{background:C.emerald,color:'#052e22',padding:'0 22px',height:40,borderRadius:9999,fontWeight:600,fontSize:14,display:'flex',alignItems:'center',whiteSpace:'nowrap',flexShrink:0,textDecoration:'none'}}>Beginner's Guide</a>
         </div>
       </nav>
       <div style={{background:'linear-gradient(180deg,#0f1d35 0%,#0b1220 100%)',borderBottom:'1px solid '+C.border,padding:'64px 32px 56px'}}>
@@ -55,7 +55,7 @@ export default function ExchangesPage() {
         <div style={{display:'flex',flexDirection:'column',gap:20}}>
           {filtered.map((e, idx) => (
             <div key={e.name} style={{background:e.featured?C.surface2:C.surface,border:'1px solid '+(e.featured?C.emeraldBorder:C.border),borderRadius:18,padding:'28px 32px',position:'relative'}}>
-              {e.featured && <div style={{position:'absolute',top:-1,right:24,background:C.emerald,color:'#fff',fontSize:11,fontWeight:700,padding:'4px 14px',borderRadius:'0 0 8px 8px'}}>TOP PICK</div>}
+              {e.featured && <div style={{position:'absolute',top:-1,right:24,background:C.emerald,color:'#052e22',fontSize:11,fontWeight:700,padding:'4px 14px',borderRadius:'0 0 8px 8px'}}>TOP PICK</div>}
               <div style={{display:'grid',gridTemplateColumns:'180px 1fr 1fr auto',gap:28,alignItems:'start'}}>
                 <div>
                   <div style={{fontWeight:700,fontSize:18,color:C.white,marginBottom:6}}>{e.name}</div>
@@ -72,10 +72,10 @@ export default function ExchangesPage() {
                 <div>
                   <div style={{fontSize:12,color:C.dim,fontWeight:600,marginBottom:8,textTransform:'uppercase',letterSpacing:'0.06em'}}>Pros & Cons</div>
                   {e.pros.map(p => <div key={p} style={{fontSize:12,color:C.emerald,marginBottom:3}}>+ {p}</div>)}
-                  {e.cons.map(c => <div key={c} style={{fontSize:12,color:'#ef4444',marginBottom:3}}>- {c}</div>)}
+                  {e.cons.map(c => <div key={c} style={{fontSize:12,color:'#f87171',marginBottom:3}}>- {c}</div>)}
                 </div>
                 <div style={{display:'flex',flexDirection:'column',gap:8,alignItems:'flex-end'}}>
-                  <a href={e.url} target="_blank" rel="noopener noreferrer" style={{display:'block',background:C.emerald,color:'#fff',borderRadius:10,padding:'11px 20px',fontWeight:600,fontSize:13,textAlign:'center',textDecoration:'none',whiteSpace:'nowrap'}}>Sign up with referral</a>
+                  <a href={e.url} target="_blank" rel="noopener noreferrer" style={{display:'block',background:C.emerald,color:'#052e22',borderRadius:10,padding:'11px 20px',fontWeight:600,fontSize:13,textAlign:'center',textDecoration:'none',whiteSpace:'nowrap'}}>Sign up with referral</a>
                   <div style={{fontSize:10,color:C.dim,textAlign:'center'}}>Affiliate link</div>
                 </div>
               </div>

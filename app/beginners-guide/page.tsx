@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 
-const C = {bg:'#0b1220',surface:'#172033',surface2:'#1e2a3f',border:'rgba(255,255,255,0.07)',emerald:'#10b981',emeraldDim:'rgba(16,185,129,0.12)',emeraldBorder:'rgba(16,185,129,0.28)',white:'#f0f6ff',muted:'#8899b4',dim:'#4e6280',font:"'Inter', system-ui, sans-serif"}
+const C = {bg:'#0b1220',surface:'#172033',surface2:'#1e2a3f',border:'rgba(255,255,255,0.07)',emerald:'#10b981',emeraldDim:'rgba(16,185,129,0.12)',emeraldBorder:'rgba(16,185,129,0.28)',white:'#f0f6ff',muted:'#8899b4',dim:'#8296b5',font:"'Inter', system-ui, sans-serif"}
 
 const faqs = [
   {q:'Is crypto legal in Canada?',a:'Yes. Cryptocurrency is legal in Canada. Exchanges must register with FINTRAC. The CRA taxes crypto gains as capital gains or business income.'},
@@ -33,7 +33,7 @@ export default function BeginnersGuidePage() {
             CryptoNorth
           </a>
           <div style={{display:'flex'}}>{[['/','Home'],['/exchanges','Exchanges'],['/tax-guide','Tax Guide'],['/wallets','Wallets'],['/beginners-guide',"Beginner's Guide"]].map(([h,l])=><a key={l} href={h} style={{color:h==='/beginners-guide'?C.white:C.muted,fontSize:14,fontWeight:h==='/beginners-guide'?600:500,padding:'0 14px',height:68,display:'flex',alignItems:'center',whiteSpace:'nowrap',textDecoration:'none'}}>{l}</a>)}</div>
-          <a href="/exchanges" style={{background:C.emerald,color:'#fff',padding:'0 22px',height:40,borderRadius:9999,fontWeight:600,fontSize:14,display:'flex',alignItems:'center',whiteSpace:'nowrap',flexShrink:0,textDecoration:'none'}}>Compare Exchanges</a>
+          <a href="/exchanges" style={{background:C.emerald,color:'#052e22',padding:'0 22px',height:40,borderRadius:9999,fontWeight:600,fontSize:14,display:'flex',alignItems:'center',whiteSpace:'nowrap',flexShrink:0,textDecoration:'none'}}>Compare Exchanges</a>
         </div>
       </nav>
       <div style={{background:'linear-gradient(180deg,#0f1d35 0%,#0b1220 100%)',borderBottom:'1px solid '+C.border,padding:'64px 32px 56px'}}>
@@ -49,7 +49,7 @@ export default function BeginnersGuidePage() {
           <div style={{display:'flex',flexDirection:'column',gap:16}}>
             {steps.map(s=>(
               <div key={s.n} style={{display:'flex',gap:20,alignItems:'flex-start'}}>
-                <div style={{width:40,height:40,borderRadius:'50%',background:C.emerald,color:'#fff',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:700,fontSize:16,flexShrink:0}}>{s.n}</div>
+                <div style={{width:40,height:40,borderRadius:'50%',background:C.emerald,color:'#052e22',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:700,fontSize:16,flexShrink:0}}>{s.n}</div>
                 <div style={{background:C.surface,border:'1px solid '+C.border,borderRadius:14,padding:'18px 22px',flex:1}}>
                   <div style={{fontWeight:600,fontSize:15,color:C.white,marginBottom:6}}>{s.t}</div>
                   <p style={{fontSize:13,color:C.muted,lineHeight:1.7,margin:'0 0 8px'}}>{s.b}</p>
@@ -93,7 +93,7 @@ export default function BeginnersGuidePage() {
           </div>
         </section>
         <div style={{background:'rgba(239,68,68,0.06)',border:'1px solid rgba(239,68,68,0.2)',borderRadius:12,padding:'16px 20px'}}>
-          <div style={{fontWeight:600,color:'#ef4444',marginBottom:6,fontSize:14}}>Important Disclaimer</div>
+          <div style={{fontWeight:600,color:'#f87171',marginBottom:6,fontSize:14}}>Important Disclaimer</div>
           <p style={{fontSize:13,color:C.muted,lineHeight:1.7,margin:0}}>This guide is for informational purposes only. Cryptocurrency is highly volatile - you can lose your entire investment. Never invest more than you can afford to lose. Regulatory information accurate as of April 2026 and may change.</p>
         </div>
       </div>

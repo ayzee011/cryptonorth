@@ -1,6 +1,6 @@
 'use client'
 
-const C = {bg:'#0b1220',surface:'#172033',surface2:'#1e2a3f',border:'rgba(255,255,255,0.07)',emerald:'#10b981',emeraldDim:'rgba(16,185,129,0.12)',emeraldBorder:'rgba(16,185,129,0.28)',white:'#f0f6ff',muted:'#8899b4',dim:'#4e6280',font:"'Inter', system-ui, sans-serif"}
+const C = {bg:'#0b1220',surface:'#172033',surface2:'#1e2a3f',border:'rgba(255,255,255,0.07)',emerald:'#10b981',emeraldDim:'rgba(16,185,129,0.12)',emeraldBorder:'rgba(16,185,129,0.28)',white:'#f0f6ff',muted:'#8899b4',dim:'#8296b5',font:"'Inter', system-ui, sans-serif"}
 
 const hw = [
   {name:'Ledger Nano X',price:'~CAD $200',coins:'5,500+',bt:true,bestFor:'Most Canadians',pros:['5,500+ coins supported','Bluetooth mobile app (Ledger Live)','Industry-leading CC EAL5+ security chip','Widely available in Canada'],cons:['Pricier than entry-level options','Company data leaks (2020, 2026) exposed customer contact info - device security and funds unaffected'],featured:true,url:'https://www.ledger.com'},
@@ -31,7 +31,7 @@ export default function WalletsPage() {
               <a key={l} href={h} style={{color:h==='/wallets'?C.white:C.muted,fontSize:14,fontWeight:h==='/wallets'?600:500,padding:'0 14px',height:68,display:'flex',alignItems:'center',whiteSpace:'nowrap',textDecoration:'none'}}>{l}</a>
             ))}
           </div>
-          <a href="/exchanges" style={{background:C.emerald,color:'#fff',padding:'0 22px',height:40,borderRadius:9999,fontWeight:600,fontSize:14,display:'flex',alignItems:'center',whiteSpace:'nowrap',flexShrink:0,textDecoration:'none'}}>Compare Exchanges</a>
+          <a href="/exchanges" style={{background:C.emerald,color:'#052e22',padding:'0 22px',height:40,borderRadius:9999,fontWeight:600,fontSize:14,display:'flex',alignItems:'center',whiteSpace:'nowrap',flexShrink:0,textDecoration:'none'}}>Compare Exchanges</a>
         </div>
       </nav>
       <div style={{background:'linear-gradient(180deg,#0f1d35 0%,#0b1220 100%)',borderBottom:'1px solid '+C.border,padding:'64px 32px 56px'}}>
@@ -47,7 +47,7 @@ export default function WalletsPage() {
           <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:20,marginBottom:20}}>
             <div style={{background:C.surface,border:'1px solid '+C.border,borderRadius:16,padding:24}}>
               <div style={{fontWeight:700,fontSize:16,color:C.white,marginBottom:4}}>Custodial Wallet</div>
-              <div style={{fontSize:13,color:'#ef4444',fontWeight:600,marginBottom:10}}>Someone else holds your keys</div>
+              <div style={{fontSize:13,color:'#f87171',fontWeight:600,marginBottom:10}}>Someone else holds your keys</div>
               <p style={{fontSize:13,color:C.muted,lineHeight:1.7,marginBottom:10}}>When you keep crypto on an exchange, the exchange controls your private keys. If the exchange is hacked, goes bankrupt, or freezes withdrawals, your funds are at risk.</p>
               <div style={{fontSize:12,color:C.dim}}>Example: QuadrigaCX (Canada, 2019) - customers lost $169M CAD</div>
             </div>
@@ -68,7 +68,7 @@ export default function WalletsPage() {
           <div style={{display:'flex',flexDirection:'column',gap:16}}>
             {hw.map(w=>(
               <div key={w.name} style={{background:w.featured?C.surface2:C.surface,border:'1px solid '+(w.featured?C.emeraldBorder:C.border),borderRadius:16,padding:28,position:'relative'}}>
-                {w.featured&&<div style={{position:'absolute',top:-1,right:24,background:C.emerald,color:'#fff',fontSize:11,fontWeight:700,padding:'4px 14px',borderRadius:'0 0 8px 8px'}}>TOP PICK</div>}
+                {w.featured&&<div style={{position:'absolute',top:-1,right:24,background:C.emerald,color:'#052e22',fontSize:11,fontWeight:700,padding:'4px 14px',borderRadius:'0 0 8px 8px'}}>TOP PICK</div>}
                 <div style={{display:'grid',gridTemplateColumns:'200px 1fr 1fr',gap:28}}>
                   <div>
                     <div style={{fontWeight:700,fontSize:17,color:C.white,marginBottom:4}}>{w.name}</div>
@@ -83,7 +83,7 @@ export default function WalletsPage() {
                   </div>
                   <div>
                     <div style={{fontSize:11,color:C.dim,fontWeight:600,marginBottom:8,textTransform:'uppercase',letterSpacing:'0.05em'}}>Cons</div>
-                    {w.cons.map(c=><div key={c} style={{fontSize:12,color:'#ef4444',marginBottom:3}}>- {c}</div>)}
+                    {w.cons.map(c=><div key={c} style={{fontSize:12,color:'#f87171',marginBottom:3}}>- {c}</div>)}
                   </div>
                 </div>
                 <div style={{marginTop:18,display:'flex',alignItems:'center',gap:14,flexWrap:'wrap'}}>

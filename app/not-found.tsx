@@ -17,7 +17,7 @@ export default function NotFound() {
           This page does not exist. You may have followed an old link or mistyped the URL.
         </p>
         <div style={{display:'flex',gap:12,justifyContent:'center',flexWrap:'wrap'}}>
-          <Link href="/" style={{background:C.emerald,color:'#fff',padding:'13px 28px',borderRadius:12,fontWeight:700,fontSize:15,textDecoration:'none',display:'inline-block'}}>
+          <Link href="/" style={{background:C.emerald,color:'#052e22',padding:'13px 28px',borderRadius:12,fontWeight:700,fontSize:15,textDecoration:'none',display:'inline-block'}}>
             Go to Homepage
           </Link>
           <Link href="/exchanges" style={{background:'transparent',color:C.white,padding:'13px 24px',borderRadius:12,fontWeight:600,fontSize:15,border:'1.5px solid rgba(255,255,255,0.2)',textDecoration:'none',display:'inline-block'}}>

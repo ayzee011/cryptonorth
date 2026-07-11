@@ -58,7 +58,7 @@ export default function TaxGuidePage() {
                 onMouseEnter={e=>(e.currentTarget.style.color=C.white)} onMouseLeave={e=>{if(h!=='/tax-guide')e.currentTarget.style.color=C.muted}}>{l}</a>
             ))}
           </div>
-          <a href="/exchanges" style={{background:C.emerald,color:'#fff',padding:'0 22px',height:40,borderRadius:9999,fontWeight:700,fontSize:13,display:'flex',alignItems:'center',whiteSpace:'nowrap',flexShrink:0,textDecoration:'none'}}
+          <a href="/exchanges" style={{background:C.emerald,color:'#052e22',padding:'0 22px',height:40,borderRadius:9999,fontWeight:700,fontSize:13,display:'flex',alignItems:'center',whiteSpace:'nowrap',flexShrink:0,textDecoration:'none'}}
             onMouseEnter={e=>(e.currentTarget.style.opacity='0.85')} onMouseLeave={e=>(e.currentTarget.style.opacity='1')}>Compare Exchanges</a>
         </div>
       </nav>
@@ -248,7 +248,7 @@ export default function TaxGuidePage() {
                   {sw.badge&&<span style={{fontSize:10,color:C.emerald,background:C.emeraldDim,padding:'3px 8px',borderRadius:4,fontWeight:700}}>{sw.badge}</span>}
                 </div>
                 <p style={{fontSize:13,color:C.muted,lineHeight:1.65,margin:'0 0 12px'}}>{sw.desc}</p>
-                {sw.featured&&<a href={sw.url} style={{display:'inline-block',background:C.emerald,color:'#fff',borderRadius:8,padding:'8px 16px',fontSize:12,fontWeight:700,textDecoration:'none'}}>Get CoinLedger →</a>}
+                {sw.featured&&<a href={sw.url} style={{display:'inline-block',background:C.emerald,color:'#052e22',borderRadius:8,padding:'8px 16px',fontSize:12,fontWeight:700,textDecoration:'none'}}>Get CoinLedger →</a>}
               </div>
             ))}
           </div>
@@ -278,7 +278,7 @@ export default function TaxGuidePage() {
       <div style={{background:'linear-gradient(135deg,#0c2a1a 0%,#0b1220 100%)',borderTop:'1px solid rgba(16,185,129,0.2)',padding:'64px 32px',textAlign:'center'}}>
         <h2 style={{fontSize:'1.7rem',fontWeight:800,letterSpacing:'-0.03em',marginBottom:12,color:C.white}}>Find the best Canadian crypto exchange</h2>
         <p style={{color:C.muted,fontSize:16,maxWidth:420,margin:'0 auto 32px',lineHeight:1.7}}>All FINTRAC-registered. All CSA-authorized. Honest fees, real pros and cons.</p>
-        <a href="/exchanges" style={{background:C.emerald,color:'#fff',padding:'14px 32px',borderRadius:12,fontWeight:700,fontSize:15,display:'inline-block',textDecoration:'none'}}
+        <a href="/exchanges" style={{background:C.emerald,color:'#052e22',padding:'14px 32px',borderRadius:12,fontWeight:700,fontSize:15,display:'inline-block',textDecoration:'none'}}
           onMouseEnter={e=>(e.currentTarget.style.opacity='0.88')} onMouseLeave={e=>(e.currentTarget.style.opacity='1')}>Compare Canadian Exchanges →</a>
       </div>
 

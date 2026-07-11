@@ -65,7 +65,7 @@ export default function Home() {
                 onMouseEnter={e=>(e.currentTarget.style.color=C.white)} onMouseLeave={e=>(e.currentTarget.style.color=C.muted)}>{l}</a>
             ))}
           </div>
-          <a href="/exchanges" style={{background:C.emerald,color:'#fff',padding:'0 22px',height:40,borderRadius:9999,fontWeight:700,fontSize:13,display:'flex',alignItems:'center',whiteSpace:'nowrap',flexShrink:0,textDecoration:'none'}}
+          <a href="/exchanges" style={{background:C.emerald,color:'#052e22',padding:'0 22px',height:40,borderRadius:9999,fontWeight:700,fontSize:13,display:'flex',alignItems:'center',whiteSpace:'nowrap',flexShrink:0,textDecoration:'none'}}
             onMouseEnter={e=>(e.currentTarget.style.opacity='0.85')} onMouseLeave={e=>(e.currentTarget.style.opacity='1')}>Compare Exchanges</a>
         </div>
       </nav>
@@ -82,7 +82,7 @@ export default function Home() {
             Unbiased reviews of every FINTRAC-registered exchange. Real CAD fees, honest pros and cons, and up-to-date CRA tax guidance. No U.S. bias, no fluff.
           </p>
           <div style={{display:'flex',gap:12}}>
-            <a href="/exchanges" style={{background:C.emerald,color:'#fff',padding:'14px 28px',borderRadius:12,fontWeight:700,fontSize:15,display:'inline-flex',alignItems:'center',textDecoration:'none'}}
+            <a href="/exchanges" style={{background:C.emerald,color:'#052e22',padding:'14px 28px',borderRadius:12,fontWeight:700,fontSize:15,display:'inline-flex',alignItems:'center',textDecoration:'none'}}
               onMouseEnter={e=>(e.currentTarget.style.opacity='0.88')} onMouseLeave={e=>(e.currentTarget.style.opacity='1')}>Find the Best Exchange →</a>
             <a href="/tax-guide" style={{background:'transparent',color:C.white,padding:'14px 24px',borderRadius:12,fontWeight:600,fontSize:15,border:'1.5px solid rgba(255,255,255,0.15)',display:'inline-flex',alignItems:'center',textDecoration:'none'}}
               onMouseEnter={e=>(e.currentTarget.style.borderColor='rgba(255,255,255,0.4)')} onMouseLeave={e=>(e.currentTarget.style.borderColor='rgba(255,255,255,0.15)')}>2026 Tax Guide</a>
@@ -147,7 +147,7 @@ export default function Home() {
 
         <div style={{background:'linear-gradient(135deg,#0c2a1a 0%,#091e2d 60%,#0b1220 100%)',border:'1.5px solid rgba(16,185,129,0.5)',borderRadius:24,padding:'40px 44px',marginBottom:24,position:'relative',overflow:'hidden'}}>
           <div style={{position:'absolute',top:0,right:0,width:500,height:300,background:'radial-gradient(ellipse at 90% 10%,rgba(16,185,129,0.1) 0%,transparent 65%)',pointerEvents:'none'}}/>
-          <div style={{position:'absolute',top:18,right:24,background:C.emerald,color:'#fff',fontSize:11,fontWeight:800,padding:'5px 14px',borderRadius:9999,letterSpacing:'0.05em'}}>★ TOP PICK — EDITOR'S CHOICE</div>
+          <div style={{position:'absolute',top:18,right:24,background:C.emerald,color:'#052e22',fontSize:11,fontWeight:800,padding:'5px 14px',borderRadius:9999,letterSpacing:'0.05em'}}>★ TOP PICK — EDITOR'S CHOICE</div>
           <div style={{display:'grid',gridTemplateColumns:'1fr 280px 200px',gap:44,alignItems:'start',position:'relative'}}>
             <div>
               <div style={{fontSize:11,color:C.emerald,fontWeight:700,letterSpacing:'0.08em',textTransform:'uppercase',marginBottom:10}}>#1 Recommended for Canadian Beginners</div>
@@ -169,7 +169,7 @@ export default function Home() {
               ))}
             </div>
             <div style={{display:'flex',flexDirection:'column',gap:14}}>
-              <a href="https://bitbuy.ca" target="_blank" rel="noopener sponsored" style={{background:C.emerald,color:'#fff',borderRadius:12,padding:'16px 20px',fontWeight:700,fontSize:15,textAlign:'center',textDecoration:'none',display:'block'}}
+              <a href="https://bitbuy.ca" target="_blank" rel="noopener sponsored" style={{background:C.emerald,color:'#052e22',borderRadius:12,padding:'16px 20px',fontWeight:700,fontSize:15,textAlign:'center',textDecoration:'none',display:'block'}}
                 onMouseEnter={e=>(e.currentTarget.style.opacity='0.88')} onMouseLeave={e=>(e.currentTarget.style.opacity='1')}>Open a Free Bitbuy Account →</a>
               <div style={{fontSize:11,color:C.dim,textAlign:'center',lineHeight:1.5}}>Affiliate link — no extra cost to you</div>
               <div style={{borderTop:'1px solid rgba(255,255,255,0.08)',paddingTop:14,display:'flex',flexDirection:'column',gap:6}}>
@@ -208,7 +208,7 @@ export default function Home() {
                 {e.cons.map(c=><div key={c} style={{fontSize:13,color:'#f87171',marginBottom:4,display:'flex',gap:6}}><span style={{fontWeight:700,flexShrink:0}}>✗</span>{c}</div>)}
               </div>
               <a href={e.url} target="_blank" rel="noopener noreferrer"
-                style={{display:'block',background:C.emerald,color:'#fff',borderRadius:10,padding:'13px 0',fontWeight:700,fontSize:13,textAlign:'center',textDecoration:'none',transition:'opacity 0.15s'}}
+                style={{display:'block',background:C.emerald,color:'#052e22',borderRadius:10,padding:'13px 0',fontWeight:700,fontSize:13,textAlign:'center',textDecoration:'none',transition:'opacity 0.15s'}}
                 onMouseEnter={e2=>(e2.currentTarget.style.opacity='0.85')} onMouseLeave={e2=>(e2.currentTarget.style.opacity='1')}
               >Get Started Free →</a>
               <div style={{fontSize:11,color:C.dim,textAlign:'center',marginTop:6}}>Affiliate link — no extra cost to you</div>
@@ -244,7 +244,7 @@ export default function Home() {
             </div>
             <div style={{display:'flex',flexDirection:'column',gap:8,minWidth:180}}>
               <a href={e.url} target="_blank" rel="noopener noreferrer"
-                style={{display:'block',background:C.emerald,color:'#fff',borderRadius:10,padding:'13px 20px',fontWeight:700,fontSize:13,textAlign:'center',textDecoration:'none',transition:'opacity 0.15s'}}
+                style={{display:'block',background:C.emerald,color:'#052e22',borderRadius:10,padding:'13px 20px',fontWeight:700,fontSize:13,textAlign:'center',textDecoration:'none',transition:'opacity 0.15s'}}
                 onMouseEnter={e2=>(e2.currentTarget.style.opacity='0.85')} onMouseLeave={e2=>(e2.currentTarget.style.opacity='1')}
               >Get Started Free →</a>
               <div style={{fontSize:11,color:C.dim,textAlign:'center'}}>Affiliate link — no extra cost to you</div>
@@ -280,7 +280,7 @@ export default function Home() {
         <h2 style={{fontSize:'2rem',fontWeight:800,letterSpacing:'-0.03em',marginBottom:12,color:C.white}}>Ready to buy crypto in Canada?</h2>
         <p style={{color:C.muted,fontSize:16,maxWidth:440,margin:'0 auto 36px',lineHeight:1.75}}>Compare regulated Canadian exchanges side by side — honest fees, real pros and cons, no U.S. bias.</p>
         <div style={{display:'flex',gap:12,justifyContent:'center'}}>
-          <a href="/exchanges" style={{background:C.emerald,color:'#fff',padding:'15px 32px',borderRadius:12,fontWeight:700,fontSize:15,display:'inline-block',textDecoration:'none'}}
+          <a href="/exchanges" style={{background:C.emerald,color:'#052e22',padding:'15px 32px',borderRadius:12,fontWeight:700,fontSize:15,display:'inline-block',textDecoration:'none'}}
             onMouseEnter={e=>(e.currentTarget.style.opacity='0.88')} onMouseLeave={e=>(e.currentTarget.style.opacity='1')}>Compare Canadian Exchanges →</a>
           <a href="/beginners-guide" style={{background:'transparent',color:C.white,padding:'15px 28px',borderRadius:12,fontWeight:600,fontSize:15,border:'1.5px solid rgba(255,255,255,0.2)',display:'inline-block',textDecoration:'none'}}
             onMouseEnter={e=>(e.currentTarget.style.borderColor='rgba(255,255,255,0.5)')} onMouseLeave={e=>(e.currentTarget.style.borderColor='rgba(255,255,255,0.2)')}>Beginner's Guide</a>

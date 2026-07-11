@@ -59,18 +59,18 @@ export default function ExchangesPage() {
               <div style={{display:'grid',gridTemplateColumns:'180px 1fr 1fr auto',gap:28,alignItems:'start'}}>
                 <div>
                   <div style={{fontWeight:700,fontSize:18,color:C.white,marginBottom:6}}>{e.name}</div>
-                  <div style={{color:'#f59e0b',fontSize:13,marginBottom:8}}>{'★'.repeat(Math.round(e.rating))} <span style={{color:C.dim,fontSize:12}}>{e.rating}/5</span></div>
+                  <div style={{color:'#f59e0b',fontSize:13,marginBottom:8}}>{'★'.repeat(Math.round(e.rating))} <span style={{color:C.muted,fontSize:12}}>{e.rating}/5</span></div>
                   <span style={{display:'inline-flex',fontSize:11,fontWeight:600,padding:'3px 8px',borderRadius:5,background:C.emeraldDim,color:C.emerald,border:'1px solid '+C.emeraldBorder}}>FINTRAC + CSA</span>
                   <div style={{fontSize:11,color:e.provinces.includes('All')?C.muted:'#f59e0b',marginTop:8,fontWeight:e.provinces.includes('All')?400:600}}>{e.provinces}</div>
                 </div>
                 <div>
-                  <div style={{fontSize:12,color:C.dim,fontWeight:600,marginBottom:8,textTransform:'uppercase',letterSpacing:'0.06em'}}>Fees & Features</div>
+                  <div style={{fontSize:12,color:C.muted,fontWeight:600,marginBottom:8,textTransform:'uppercase',letterSpacing:'0.06em'}}>Fees & Features</div>
                   {[['Trading Fee',e.fee],['Maker/Taker',e.makerFee+' / '+e.takerFee],['Coins',e.coins+'+'],['Interac',e.interac?'Yes':'No'],['Staking',e.staking?'Yes':'No'],['Best for',e.bestFor]].map(([k,v]) => (
                     <div key={k} style={{fontSize:13,color:C.muted,marginBottom:4}}>{k}: <strong style={{color:C.white}}>{v}</strong></div>
                   ))}
                 </div>
                 <div>
-                  <div style={{fontSize:12,color:C.dim,fontWeight:600,marginBottom:8,textTransform:'uppercase',letterSpacing:'0.06em'}}>Pros & Cons</div>
+                  <div style={{fontSize:12,color:C.muted,fontWeight:600,marginBottom:8,textTransform:'uppercase',letterSpacing:'0.06em'}}>Pros & Cons</div>
                   {e.pros.map(p => <div key={p} style={{fontSize:12,color:C.emerald,marginBottom:3}}>+ {p}</div>)}
                   {e.cons.map(c => <div key={c} style={{fontSize:12,color:'#f87171',marginBottom:3}}>- {c}</div>)}
                 </div>
@@ -119,9 +119,9 @@ export default function ExchangesPage() {
       </div>
       <footer style={{background:'#070e1a',borderTop:'1px solid '+C.border,padding:'44px 32px'}}>
         <div style={{maxWidth:1200,margin:'0 auto',display:'flex',justifyContent:'space-between',alignItems:'center',flexWrap:'wrap',gap:20}}>
-          <div><div style={{fontWeight:700,fontSize:16,display:'flex',alignItems:'center',gap:8}}><div style={{width:40,height:40,background:'#0d1f35',borderRadius:10,border:'1.5px solid #10b981',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0}}><svg viewBox="0 0 40 40" style={{width:26,height:26}}><path d="M20 3 L23 17 L20 14 L17 17 Z" fill="#10b981"/><path d="M20 37 L23 23 L20 26 L17 23 Z" fill="#10b981"/><path d="M3 20 L17 23 L14 20 L17 17 Z" fill="#10b981"/><path d="M37 20 L23 17 L26 20 L23 23 Z" fill="#10b981"/><circle cx="20" cy="20" r="3.5" fill="#10b981"/></svg></div>CryptoNorth</div><div style={{fontSize:12,color:C.dim,marginTop:3}}>Canada's independent crypto resource</div></div>
-          <div style={{display:'flex',gap:24,flexWrap:'wrap'}}>{[['/','Home'],['/exchanges','Exchanges'],['/tax-guide','Tax Guide'],['/wallets','Wallets'],['/beginners-guide',"Beginner's Guide"]].map(([h,l])=><a key={l} href={h} style={{fontSize:13,color:C.dim,textDecoration:'none'}}>{l}</a>)}</div>
-          <div style={{fontSize:11,color:'#2a3a52',width:'100%',marginTop:8}}>© 2026 CryptoNorth. Not financial or legal advice. Regulatory status verified April 2026. Some links are affiliate links.</div>
+          <div><div style={{fontWeight:700,fontSize:16,display:'flex',alignItems:'center',gap:8}}><div style={{width:40,height:40,background:'#0d1f35',borderRadius:10,border:'1.5px solid #10b981',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0}}><svg viewBox="0 0 40 40" style={{width:26,height:26}}><path d="M20 3 L23 17 L20 14 L17 17 Z" fill="#10b981"/><path d="M20 37 L23 23 L20 26 L17 23 Z" fill="#10b981"/><path d="M3 20 L17 23 L14 20 L17 17 Z" fill="#10b981"/><path d="M37 20 L23 17 L26 20 L23 23 Z" fill="#10b981"/><circle cx="20" cy="20" r="3.5" fill="#10b981"/></svg></div>CryptoNorth</div><div style={{fontSize:12,color:C.muted,marginTop:3}}>Canada's independent crypto resource</div></div>
+          <div style={{display:'flex',gap:24,flexWrap:'wrap'}}>{[['/','Home'],['/exchanges','Exchanges'],['/tax-guide','Tax Guide'],['/wallets','Wallets'],['/beginners-guide',"Beginner's Guide"]].map(([h,l])=><a key={l} href={h} style={{fontSize:13,color:C.muted,textDecoration:'none'}}>{l}</a>)}</div>
+          <div style={{fontSize:12,color:C.muted,width:'100%',marginTop:8}}>© 2026 CryptoNorth. Not financial or legal advice. Regulatory status verified April 2026. Some links are affiliate links.</div>
         </div>
       </footer>
     </div>

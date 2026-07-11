@@ -49,7 +49,7 @@ export default function WalletsPage() {
               <div style={{fontWeight:700,fontSize:16,color:C.white,marginBottom:4}}>Custodial Wallet</div>
               <div style={{fontSize:13,color:'#f87171',fontWeight:600,marginBottom:10}}>Someone else holds your keys</div>
               <p style={{fontSize:13,color:C.muted,lineHeight:1.7,marginBottom:10}}>When you keep crypto on an exchange, the exchange controls your private keys. If the exchange is hacked, goes bankrupt, or freezes withdrawals, your funds are at risk.</p>
-              <div style={{fontSize:12,color:C.dim}}>Example: QuadrigaCX (Canada, 2019) - customers lost $169M CAD</div>
+              <div style={{fontSize:12,color:C.muted}}>Example: QuadrigaCX (Canada, 2019) - customers lost $169M CAD</div>
             </div>
             <div style={{background:C.surface,border:'1px solid '+C.emeraldBorder,borderRadius:16,padding:24}}>
               <div style={{fontWeight:700,fontSize:16,color:C.white,marginBottom:4}}>Non-Custodial Wallet</div>
@@ -103,7 +103,7 @@ export default function WalletsPage() {
                 <div style={{display:'flex',justifyContent:'space-between',marginBottom:8}}>
                   <div>
                     <div style={{fontWeight:700,fontSize:15,color:C.white}}>{w.name}</div>
-                    <div style={{fontSize:12,color:C.dim}}>{w.type}</div>
+                    <div style={{fontSize:12,color:C.muted}}>{w.type}</div>
                   </div>
                   <span style={{fontSize:11,color:C.muted,background:'rgba(255,255,255,0.05)',padding:'3px 8px',borderRadius:6,alignSelf:'flex-start'}}>{w.coins}</span>
                 </div>
@@ -142,9 +142,9 @@ export default function WalletsPage() {
       </div>
       <footer style={{background:'#070e1a',borderTop:'1px solid '+C.border,padding:'44px 32px'}}>
         <div style={{maxWidth:1200,margin:'0 auto',display:'flex',justifyContent:'space-between',alignItems:'center',flexWrap:'wrap',gap:20}}>
-          <div><div style={{fontWeight:700,fontSize:16,display:'flex',alignItems:'center',gap:8}}><div style={{width:40,height:40,background:'#0d1f35',borderRadius:10,border:'1.5px solid #10b981',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0}}><svg viewBox="0 0 40 40" style={{width:26,height:26}}><path d="M20 3 L23 17 L20 14 L17 17 Z" fill="#10b981"/><path d="M20 37 L23 23 L20 26 L17 23 Z" fill="#10b981"/><path d="M3 20 L17 23 L14 20 L17 17 Z" fill="#10b981"/><path d="M37 20 L23 17 L26 20 L23 23 Z" fill="#10b981"/><circle cx="20" cy="20" r="3.5" fill="#10b981"/></svg></div>CryptoNorth</div><div style={{fontSize:12,color:C.dim,marginTop:3}}>Canada's independent crypto resource</div></div>
-          <div style={{display:'flex',gap:24,flexWrap:'wrap'}}>{[['/','Home'],['/exchanges','Exchanges'],['/tax-guide','Tax Guide'],['/wallets','Wallets'],['/beginners-guide',"Beginner's Guide"]].map(([h,l])=><a key={l} href={h} style={{fontSize:13,color:C.dim,textDecoration:'none'}}>{l}</a>)}</div>
-          <div style={{fontSize:11,color:'#2a3a52',width:'100%',marginTop:8}}>© 2026 CryptoNorth. Not financial advice. Crypto is not CDIC insured.</div>
+          <div><div style={{fontWeight:700,fontSize:16,display:'flex',alignItems:'center',gap:8}}><div style={{width:40,height:40,background:'#0d1f35',borderRadius:10,border:'1.5px solid #10b981',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0}}><svg viewBox="0 0 40 40" style={{width:26,height:26}}><path d="M20 3 L23 17 L20 14 L17 17 Z" fill="#10b981"/><path d="M20 37 L23 23 L20 26 L17 23 Z" fill="#10b981"/><path d="M3 20 L17 23 L14 20 L17 17 Z" fill="#10b981"/><path d="M37 20 L23 17 L26 20 L23 23 Z" fill="#10b981"/><circle cx="20" cy="20" r="3.5" fill="#10b981"/></svg></div>CryptoNorth</div><div style={{fontSize:12,color:C.muted,marginTop:3}}>Canada's independent crypto resource</div></div>
+          <div style={{display:'flex',gap:24,flexWrap:'wrap'}}>{[['/','Home'],['/exchanges','Exchanges'],['/tax-guide','Tax Guide'],['/wallets','Wallets'],['/beginners-guide',"Beginner's Guide"]].map(([h,l])=><a key={l} href={h} style={{fontSize:13,color:C.muted,textDecoration:'none'}}>{l}</a>)}</div>
+          <div style={{fontSize:12,color:C.muted,width:'100%',marginTop:8}}>© 2026 CryptoNorth. Not financial advice. Crypto is not CDIC insured.</div>
         </div>
       </footer>
     </div>

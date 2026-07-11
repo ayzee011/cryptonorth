@@ -24,7 +24,7 @@ const navLinks: [string, string][] = [['/', 'Home'],['/exchanges','Exchanges'],[
 
 const Sup = ({n, href}: {n: number, href: string}) => (
   <a href={href} target="_blank" rel="noopener noreferrer"
-    style={{fontSize:10,color:C.emerald,fontWeight:700,verticalAlign:'super',marginLeft:2,textDecoration:'none',border:'1px solid '+C.emeraldBorder,borderRadius:3,padding:'0 4px',background:C.emeraldDim}}
+    style={{fontSize:11,color:C.emerald,fontWeight:700,verticalAlign:'super',marginLeft:2,textDecoration:'none',border:'1px solid '+C.emeraldBorder,borderRadius:3,padding:'0 4px',background:C.emeraldDim}}
   >[{n}]</a>
 )
 
@@ -74,7 +74,7 @@ export default function TaxGuidePage() {
           <p style={{fontSize:17,color:C.muted,lineHeight:1.75,margin:'0 0 12px',maxWidth:620}}>
             Everything Canadians need to know about reporting cryptocurrency to the CRA for the 2025 tax year. All key claims are cited to official government sources.
           </p>
-          <p style={{fontSize:13,color:C.dim,margin:0}}>This guide is for informational purposes only. It does not constitute tax or legal advice. Always consult a qualified CPA for your specific situation.</p>
+          <p style={{fontSize:13,color:C.muted,margin:0}}>This guide is for informational purposes only. It does not constitute tax or legal advice. Always consult a qualified CPA for your specific situation.</p>
         </div>
       </div>
 
@@ -160,7 +160,7 @@ export default function TaxGuidePage() {
               <thead>
                 <tr style={{borderBottom:'1px solid '+C.border}}>
                   {['Date','Action','BTC','Price (CAD)','Your ACB/BTC'].map(h=>(
-                    <th key={h} style={{textAlign:'left',padding:'8px 14px',color:C.dim,fontWeight:600,fontSize:11,textTransform:'uppercase',letterSpacing:'0.05em'}}>{h}</th>
+                    <th key={h} style={{textAlign:'left',padding:'8px 14px',color:C.muted,fontWeight:600,fontSize:12,textTransform:'uppercase',letterSpacing:'0.05em'}}>{h}</th>
                   ))}
                 </tr>
               </thead>
@@ -196,7 +196,7 @@ export default function TaxGuidePage() {
               <thead>
                 <tr style={{background:'rgba(255,255,255,0.03)',borderBottom:'1px solid '+C.border}}>
                   {['Taxable Income (2025)','Federal Rate'].map(h=>(
-                    <th key={h} style={{textAlign:'left',padding:'12px 20px',color:C.dim,fontWeight:600,fontSize:11,textTransform:'uppercase',letterSpacing:'0.05em'}}>{h}</th>
+                    <th key={h} style={{textAlign:'left',padding:'12px 20px',color:C.muted,fontWeight:600,fontSize:12,textTransform:'uppercase',letterSpacing:'0.05em'}}>{h}</th>
                   ))}
                 </tr>
               </thead>
@@ -245,7 +245,7 @@ export default function TaxGuidePage() {
               <div key={sw.name} style={{background:C.surface,border:'1px solid '+(sw.featured?C.emeraldBorder:C.border),borderRadius:14,padding:20}}>
                 <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:8}}>
                   <div style={{fontWeight:700,fontSize:15,color:C.white}}>{sw.name}</div>
-                  {sw.badge&&<span style={{fontSize:10,color:C.emerald,background:C.emeraldDim,padding:'3px 8px',borderRadius:4,fontWeight:700}}>{sw.badge}</span>}
+                  {sw.badge&&<span style={{fontSize:11,color:C.emerald,background:C.emeraldDim,padding:'3px 8px',borderRadius:4,fontWeight:700}}>{sw.badge}</span>}
                 </div>
                 <p style={{fontSize:13,color:C.muted,lineHeight:1.65,margin:'0 0 12px'}}>{sw.desc}</p>
                 {sw.featured&&<a href={sw.url} style={{display:'inline-block',background:C.emerald,color:'#052e22',borderRadius:8,padding:'8px 16px',fontSize:12,fontWeight:700,textDecoration:'none'}}>Get CoinLedger →</a>}
@@ -293,8 +293,8 @@ export default function TaxGuidePage() {
           </div>
         </div>
         <div style={{maxWidth:1200,margin:'20px auto 0',paddingTop:20,borderTop:'1px solid '+C.border,display:'flex',justifyContent:'space-between',flexWrap:'wrap',gap:8}}>
-          <div style={{fontSize:12,color:C.dim}}>© 2026 CryptoNorth · Canada's independent crypto resource</div>
-          <div style={{fontSize:12,color:C.dim}}>Not tax or legal advice. Always verify with the CRA and a qualified CPA.</div>
+          <div style={{fontSize:12,color:C.muted}}>© 2026 CryptoNorth · Canada's independent crypto resource</div>
+          <div style={{fontSize:12,color:C.muted}}>Not tax or legal advice. Always verify with the CRA and a qualified CPA.</div>
         </div>
       </footer>
     </div>

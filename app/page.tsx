@@ -105,11 +105,11 @@ export default function Home() {
                 <div style={{width:46,height:46,borderRadius:14,background:coin.bg,color:coin.color,display:'flex',alignItems:'center',justifyContent:'center',fontSize:20,fontWeight:800}}>{coin.icon}</div>
                 <div>
                   <div style={{fontWeight:700,fontSize:15,color:C.white}}>{coin.name}</div>
-                  <div style={{fontSize:12,color:C.dim,marginTop:1}}>{coin.sym}</div>
+                  <div style={{fontSize:12,color:C.muted,marginTop:1}}>{coin.sym}</div>
                 </div>
               </div>
               <div style={{textAlign:'right'}}>
-                <div style={{fontSize:21,fontWeight:800,letterSpacing:'-0.02em',fontFamily:'monospace',color:C.white}}>{coin.data?.cad ? fmt(coin.data.cad) : <span style={{color:C.dim,fontSize:14}}>{prices.unavailable ? '—' : 'Loading…'}</span>}</div>
+                <div style={{fontSize:21,fontWeight:800,letterSpacing:'-0.02em',fontFamily:'monospace',color:C.white}}>{coin.data?.cad ? fmt(coin.data.cad) : <span style={{color:C.muted,fontSize:14}}>{prices.unavailable ? '—' : 'Loading…'}</span>}</div>
                 {coin.data?.cad_24h_change!=null&&<div style={{fontSize:13,fontWeight:700,marginTop:3,color:coin.data.cad_24h_change>=0?C.emerald:'#f87171'}}>{coin.data.cad_24h_change>=0?'▲ +':'▼ '}{Math.abs(coin.data.cad_24h_change).toFixed(2)}%</div>}
               </div>
             </div>
@@ -191,9 +191,9 @@ export default function Home() {
               <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-start',marginBottom:16}}>
                 <div>
                   <div style={{fontWeight:800,fontSize:20,letterSpacing:'-0.02em',marginBottom:4,color:C.white}}>{e.name}</div>
-                  <div style={{color:'#f59e0b',fontSize:14}}>{e.stars} <span style={{color:C.dim,fontSize:12}}>{e.rating}/5</span></div>
+                  <div style={{color:'#f59e0b',fontSize:14}}>{e.stars} <span style={{color:C.muted,fontSize:12}}>{e.rating}/5</span></div>
                 </div>
-                <span style={{fontSize:10,fontWeight:700,padding:'4px 10px',borderRadius:6,background:C.emeraldDim,color:C.emerald,border:'1px solid '+C.emeraldBorder,whiteSpace:'nowrap'}}>FINTRAC + CSA</span>
+                <span style={{fontSize:11,fontWeight:700,padding:'4px 10px',borderRadius:6,background:C.emeraldDim,color:C.emerald,border:'1px solid '+C.emeraldBorder,whiteSpace:'nowrap'}}>FINTRAC + CSA</span>
               </div>
               <div style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:8,marginBottom:16}}>
                 {[['Fee',e.fee],['Coins',e.coins],['Best for',e.bestFor]].map(([k,v])=>(
@@ -225,8 +225,8 @@ export default function Home() {
             <div>
               <div style={{display:'flex',alignItems:'center',gap:14,marginBottom:12}}>
                 <div style={{fontWeight:800,fontSize:22,letterSpacing:'-0.02em',color:C.white}}>{e.name}</div>
-                <div style={{color:'#f59e0b',fontSize:14}}>{e.stars} <span style={{color:C.dim,fontSize:12}}>{e.rating}/5</span></div>
-                <span style={{fontSize:10,fontWeight:700,padding:'4px 10px',borderRadius:6,background:C.emeraldDim,color:C.emerald,border:'1px solid '+C.emeraldBorder}}>FINTRAC + CSA</span>
+                <div style={{color:'#f59e0b',fontSize:14}}>{e.stars} <span style={{color:C.muted,fontSize:12}}>{e.rating}/5</span></div>
+                <span style={{fontSize:11,fontWeight:700,padding:'4px 10px',borderRadius:6,background:C.emeraldDim,color:C.emerald,border:'1px solid '+C.emeraldBorder}}>FINTRAC + CSA</span>
                 {e.province&&<span style={{fontSize:11,color:'#f59e0b',background:'rgba(245,158,11,0.08)',border:'1px solid rgba(245,158,11,0.2)',borderRadius:6,padding:'4px 10px'}}>⚠️ {e.province}</span>}
               </div>
               <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:8}}>
@@ -299,8 +299,8 @@ export default function Home() {
             </div>
           </div>
           <div style={{borderTop:'1px solid '+C.border,paddingTop:24,display:'flex',justifyContent:'space-between',alignItems:'center',flexWrap:'wrap',gap:12}}>
-            <div style={{fontSize:12,color:C.dim}}>© 2026 CryptoNorth · Canada's independent crypto resource</div>
-            <div style={{fontSize:12,color:C.dim,maxWidth:480,textAlign:'right',lineHeight:1.5}}>Not financial or legal advice. Some links are affiliate links. Regulatory status verified April 2026.</div>
+            <div style={{fontSize:12,color:C.muted}}>© 2026 CryptoNorth · Canada's independent crypto resource</div>
+            <div style={{fontSize:12,color:C.muted,maxWidth:480,textAlign:'right',lineHeight:1.5}}>Not financial or legal advice. Some links are affiliate links. Regulatory status verified April 2026.</div>
           </div>
         </div>
       </footer>

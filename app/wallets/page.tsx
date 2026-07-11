@@ -78,17 +78,17 @@ export default function WalletsPage() {
                     <div style={{fontSize:12,color:C.muted}}>Best for: <strong style={{color:C.white}}>{w.bestFor}</strong></div>
                   </div>
                   <div>
-                    <div style={{fontSize:11,color:C.dim,fontWeight:600,marginBottom:8,textTransform:'uppercase',letterSpacing:'0.05em'}}>Pros</div>
+                    <div style={{fontSize:12,color:C.muted,fontWeight:600,marginBottom:8,textTransform:'uppercase',letterSpacing:'0.05em'}}>Pros</div>
                     {w.pros.map(p=><div key={p} style={{fontSize:12,color:C.emerald,marginBottom:3}}>+ {p}</div>)}
                   </div>
                   <div>
-                    <div style={{fontSize:11,color:C.dim,fontWeight:600,marginBottom:8,textTransform:'uppercase',letterSpacing:'0.05em'}}>Cons</div>
+                    <div style={{fontSize:12,color:C.muted,fontWeight:600,marginBottom:8,textTransform:'uppercase',letterSpacing:'0.05em'}}>Cons</div>
                     {w.cons.map(c=><div key={c} style={{fontSize:12,color:'#f87171',marginBottom:3}}>- {c}</div>)}
                   </div>
                 </div>
                 <div style={{marginTop:18,display:'flex',alignItems:'center',gap:14,flexWrap:'wrap'}}>
                   <a href={w.url} target="_blank" rel="noopener sponsored" style={{background:w.featured?C.emerald:C.surface,color:w.featured?'#fff':C.emerald,border:'1px solid '+(w.featured?C.emerald:C.emeraldBorder),borderRadius:10,padding:'10px 18px',fontWeight:700,fontSize:13,textDecoration:'none',display:'inline-block'}}>Buy direct from manufacturer →</a>
-                  <span style={{fontSize:11,color:C.dim}}>Never buy hardware wallets from resellers</span>
+                  <span style={{fontSize:12,color:C.muted}}>Never buy hardware wallets from resellers</span>
                 </div>
               </div>
             ))}

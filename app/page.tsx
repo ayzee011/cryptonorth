@@ -91,7 +91,7 @@ export default function Home() {
 
         <div style={{background:C.surface,border:'1px solid '+C.border,borderRadius:24,padding:32,boxShadow:'0 32px 80px rgba(0,0,0,0.5)'}}>
           <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:24}}>
-            <span style={{fontSize:11,color:C.dim,fontWeight:700,letterSpacing:'0.1em',textTransform:'uppercase'}}>Live Prices · CAD</span>
+            <span style={{fontSize:12,color:C.muted,fontWeight:700,letterSpacing:'0.1em',textTransform:'uppercase'}}>Live Prices · CAD</span>
             <span style={{display:'flex',alignItems:'center',gap:6,fontSize:12,color:C.emerald,fontWeight:600}}>
               <span style={{width:7,height:7,background:C.emerald,borderRadius:'50%',display:'inline-block'}}/>Live
             </span>
@@ -118,7 +118,7 @@ export default function Home() {
             {[['FINTRAC','Federal compliance'],['CSA','Provincial approval'],['CAD','On-ramp focus'],['CRA','Tax guidance']].map(([k,v])=>(
               <div key={k} style={{background:'rgba(255,255,255,0.04)',borderRadius:10,padding:'10px 14px',border:'1px solid '+C.border}}>
                 <div style={{fontSize:12,fontWeight:700,color:C.emerald}}>{k}</div>
-                <div style={{fontSize:11,color:C.dim,marginTop:2}}>{v}</div>
+                <div style={{fontSize:12,color:C.muted,marginTop:2}}>{v}</div>
               </div>
             ))}
           </div>
@@ -163,7 +163,7 @@ export default function Home() {
             <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:10}}>
               {[['Trading Fee','0.20%'],['Maker Fee','0.10%'],['Min. Deposit','None'],['Coins','40+'],['Interac','Free'],['Provinces','All']].map(([k,v])=>(
                 <div key={k} style={{background:'rgba(255,255,255,0.05)',borderRadius:10,padding:'12px 14px',border:'1px solid rgba(255,255,255,0.07)'}}>
-                  <div style={{fontSize:11,color:C.dim,marginBottom:4,textTransform:'uppercase',letterSpacing:'0.04em',fontWeight:600}}>{k}</div>
+                  <div style={{fontSize:12,color:C.muted,marginBottom:4,textTransform:'uppercase',letterSpacing:'0.04em',fontWeight:600}}>{k}</div>
                   <div style={{fontSize:16,fontWeight:700,color:C.white}}>{v}</div>
                 </div>
               ))}
@@ -171,7 +171,7 @@ export default function Home() {
             <div style={{display:'flex',flexDirection:'column',gap:14}}>
               <a href="https://bitbuy.ca" target="_blank" rel="noopener sponsored" style={{background:C.emerald,color:'#052e22',borderRadius:12,padding:'16px 20px',fontWeight:700,fontSize:15,textAlign:'center',textDecoration:'none',display:'block'}}
                 onMouseEnter={e=>(e.currentTarget.style.opacity='0.88')} onMouseLeave={e=>(e.currentTarget.style.opacity='1')}>Open a Free Bitbuy Account →</a>
-              <div style={{fontSize:11,color:C.dim,textAlign:'center',lineHeight:1.5}}>Affiliate link — no extra cost to you</div>
+              <div style={{fontSize:12,color:C.muted,textAlign:'center',lineHeight:1.5}}>Affiliate link — no extra cost to you</div>
               <div style={{borderTop:'1px solid rgba(255,255,255,0.08)',paddingTop:14,display:'flex',flexDirection:'column',gap:6}}>
                 {['Canadian-owned since 2016','Free CAD deposits via Interac','Insured cold storage custody','Clean beginner dashboard'].map(p=>(
                   <div key={p} style={{fontSize:12,color:C.emerald,display:'flex',alignItems:'center',gap:6}}><span style={{fontWeight:700}}>✓</span>{p}</div>
@@ -198,8 +198,8 @@ export default function Home() {
               <div style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:8,marginBottom:16}}>
                 {[['Fee',e.fee],['Coins',e.coins],['Best for',e.bestFor]].map(([k,v])=>(
                   <div key={k} style={{background:'rgba(255,255,255,0.04)',borderRadius:8,padding:'10px 12px',border:'1px solid '+C.border}}>
-                    <div style={{fontSize:10,color:C.dim,marginBottom:3,fontWeight:600,textTransform:'uppercase',letterSpacing:'0.04em'}}>{k}</div>
-                    <div style={{fontSize:12,fontWeight:700,color:C.white,lineHeight:1.3}}>{v}</div>
+                    <div style={{fontSize:12,color:C.muted,marginBottom:3,fontWeight:600,textTransform:'uppercase',letterSpacing:'0.04em'}}>{k}</div>
+                    <div style={{fontSize:14,fontWeight:700,color:C.white,lineHeight:1.3}}>{v}</div>
                   </div>
                 ))}
               </div>
@@ -211,7 +211,7 @@ export default function Home() {
                 style={{display:'block',background:C.emerald,color:'#052e22',borderRadius:10,padding:'13px 0',fontWeight:700,fontSize:13,textAlign:'center',textDecoration:'none',transition:'opacity 0.15s'}}
                 onMouseEnter={e2=>(e2.currentTarget.style.opacity='0.85')} onMouseLeave={e2=>(e2.currentTarget.style.opacity='1')}
               >Get Started Free →</a>
-              <div style={{fontSize:11,color:C.dim,textAlign:'center',marginTop:6}}>Affiliate link — no extra cost to you</div>
+              <div style={{fontSize:12,color:C.muted,textAlign:'center',marginTop:6}}>Affiliate link — no extra cost to you</div>
             </div>
           ))}
         </div>
@@ -232,8 +232,8 @@ export default function Home() {
               <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:8}}>
                 {[['Fee',e.fee],['Coins',e.coins],['Best for',e.bestFor]].map(([k,v])=>(
                   <div key={k} style={{background:'rgba(255,255,255,0.04)',borderRadius:8,padding:'10px 12px',border:'1px solid '+C.border}}>
-                    <div style={{fontSize:10,color:C.dim,marginBottom:3,fontWeight:600,textTransform:'uppercase',letterSpacing:'0.04em'}}>{k}</div>
-                    <div style={{fontSize:12,fontWeight:700,color:C.white}}>{v}</div>
+                    <div style={{fontSize:12,color:C.muted,marginBottom:3,fontWeight:600,textTransform:'uppercase',letterSpacing:'0.04em'}}>{k}</div>
+                    <div style={{fontSize:14,fontWeight:700,color:C.white}}>{v}</div>
                   </div>
                 ))}
               </div>
@@ -247,7 +247,7 @@ export default function Home() {
                 style={{display:'block',background:C.emerald,color:'#052e22',borderRadius:10,padding:'13px 20px',fontWeight:700,fontSize:13,textAlign:'center',textDecoration:'none',transition:'opacity 0.15s'}}
                 onMouseEnter={e2=>(e2.currentTarget.style.opacity='0.85')} onMouseLeave={e2=>(e2.currentTarget.style.opacity='1')}
               >Get Started Free →</a>
-              <div style={{fontSize:11,color:C.dim,textAlign:'center'}}>Affiliate link — no extra cost to you</div>
+              <div style={{fontSize:12,color:C.muted,textAlign:'center'}}>Affiliate link — no extra cost to you</div>
             </div>
           </div>
         ))}

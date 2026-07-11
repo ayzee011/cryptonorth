@@ -76,7 +76,7 @@ export default function ExchangesPage() {
                 </div>
                 <div style={{display:'flex',flexDirection:'column',gap:8,alignItems:'flex-end'}}>
                   <a href={e.url} target="_blank" rel="noopener noreferrer" style={{display:'block',background:C.emerald,color:'#052e22',borderRadius:10,padding:'11px 20px',fontWeight:600,fontSize:13,textAlign:'center',textDecoration:'none',whiteSpace:'nowrap'}}>Sign up with referral</a>
-                  <div style={{fontSize:10,color:C.dim,textAlign:'center'}}>Affiliate link</div>
+                  <div style={{fontSize:12,color:C.muted,textAlign:'center'}}>Affiliate link</div>
                 </div>
               </div>
             </div>

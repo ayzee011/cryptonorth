@@ -87,7 +87,7 @@ export default function WalletsPage() {
                   </div>
                 </div>
                 <div style={{marginTop:18,display:'flex',alignItems:'center',gap:14,flexWrap:'wrap'}}>
-                  <a href={w.url} target="_blank" rel="noopener sponsored" style={{background:w.featured?C.emerald:C.surface,color:w.featured?'#fff':C.emerald,border:'1px solid '+(w.featured?C.emerald:C.emeraldBorder),borderRadius:10,padding:'10px 18px',fontWeight:700,fontSize:13,textDecoration:'none',display:'inline-block'}}>Buy direct from manufacturer →</a>
+                  <a href={w.url} target="_blank" rel="noopener sponsored" style={{background:w.featured?C.emerald:C.emeraldDim,color:w.featured?'#052e22':C.emerald,border:'1px solid '+(w.featured?C.emerald:C.emeraldBorder),borderRadius:10,padding:'10px 18px',fontWeight:700,fontSize:13,textDecoration:'none',display:'inline-block'}}>Buy direct from manufacturer →</a>
                   <span style={{fontSize:12,color:C.muted}}>Never buy hardware wallets from resellers</span>
                 </div>
               </div>
